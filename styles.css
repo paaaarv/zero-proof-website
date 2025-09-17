@@ -114,6 +114,29 @@ body {
   margin-inline: auto;
 }
 
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--elev);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+.button:hover { filter: brightness(1.05); }
+.button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.button-ghost {
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* ========== Header & Nav ========== */
 
 /* ========== Hero ========== */
