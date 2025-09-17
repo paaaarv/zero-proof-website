@@ -296,6 +296,9 @@ body {
   color: var(--muted);
   text-decoration: none;
 }
+#social li {
+  display:inline-block;
+}
 .site-footer .social a:hover {
   color: var(--accent-strong);
 }
