@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -6,12 +6,17 @@
   <title>[Brand Name] — Alcohol-Free Mocktails</title>
   <meta name="description" content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." />
   <meta name="author" content="[GIT 450 WEB TEAM  Fall B 2025]" />
+  <title>ZeroProof — Alcohol-Free Mocktails</title>
+  <meta name="description" content="Bold mocktails for every mood — zero alcohol, maximum flavor." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="[Brand Name] — Alcohol-Free Mocktails" />
   <meta property="og:description" content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mocktail-domain.com" />
+  <!-- Meta OG & Twitter tags (for social sharing) -->
+  <meta property="og:title" content="ZeroProof — Alcohol-Free Mocktails" />
+  <meta property="og:description" content="Bold mocktails for every mood — zero alcohol, maximum flavor." />
   <meta property="og:image" content="https://mocktail-domain.com/assets/og-image.jpg" />
 
   <!-- Twitter -->
@@ -28,8 +33,10 @@
   <!-- Stylesheet Link -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
+
 
 
     <!-- ========== Header & Nav ========== -->
@@ -57,55 +64,81 @@
         </div>
     </header>
 
-  <!-- ========== Main ========== -->
+
+
+
+  <!-- Main content -->
   <main id="main">
-    <!-- ========== Hero ========== -->
-    <section aria-labelledby="hero-title">
-      <h1 id="hero-title">[Brand Name] Alcohol-Free Mocktails</h1>
-      <p>Bold flavor, zero compromise. Premium mocktails crafted for every occasion.</p>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container">
+        <h1>The Best Mocktails on the Block</h1>
+        <p class="hero-sub">Mocktails crafted with premium ingredients. 100% alcohol-free. 100% flavor-forward.</p>
+        <div class="cta-row">
+          <a href="/menu.html" class="button">Explore Menu</a>
+          <a href="/checkout.html" class="button button-ghost">Buy Now</a>
+        </div>
+      </div>
     </section>
 
-    <!-- ========== Products ========== -->
-    <section aria-labelledby="products-title">
-      <h2 id="products-title">Top Products</h2>
+    <!-- Product section -->
+    <section class="products">
+      <div class="container">
+        <h2>Top Mocktails</h2>
+        <div class="product-grid">
+          <!-- Product card 1 -->
+          <article class="card">
+            <div class="card-media">
+              <img src="https://placehold.co/600x400?text=Mocktail+1" alt="Mocktail 1" />
+            </div>
+            <div class="card-body">
+              <h3>MockTail 1</h3>
+              <p>Example: Pineapple, coconut, lime & a splash of mint.</p>
+              <a href="/checkout.html" class="button">Buy Now</a>
+            </div>
+          </article>
 
-      <ul>
-        <li>
-          <article aria-labelledby="product1-title">
-            <h3 id="product1-title">Product Name</h3>
-            <p>Product Description</p>
-            <a href="/checkout.html">Buy Now</a>
+          <!-- Product card 2 -->
+          <article class="card">
+            <div class="card-media">
+              <img src="https://placehold.co/600x400?text=Mocktail+2" alt="Mocktail 2" />
+            </div>
+            <div class="card-body">
+              <h3>MockTail 2</h3>
+              <p>Example: Strawberries, soda, elderflower and citrus.</p>
+              <a href="/checkout.html" class="button">Buy Now</a>
+            </div>
           </article>
-        </li>
-        <li>
-          <article aria-labelledby="product2-title">
-            <h3 id="product2-title">Product Name</h3>
-            <p>Product Description</p>
-            <a href="/checkout.html">Buy Now</a>
+
+          <!-- Product card 3 -->
+          <article class="card">
+            <div class="card-media">
+              <img src="https://placehold.co/600x400?text=Mocktail+3" alt="Mocktail 3" />
+            </div>
+            <div class="card-body">
+              <h3>MockTail 3</h3>
+              <p>Example: Orange, hibiscus, pomegranate & fizz.</p>
+              <a href="/checkout.html" class="button">Buy Now</a>
+            </div>
           </article>
-        </li>
-        <li>
-          <article aria-labelledby="product3-title">
-            <h3 id="product3-title">Product Name</h3>
-            <p>Product Description</p>
-            <a href="/checkout.html">Buy Now</a>
-          </article>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- ========== Footer ========== -->
-  <footer role="contentinfo">
-    <p>© <time datetime="2025">2025</time> [Brand Name]. All rights reserved.</p>
-    <nav aria-label="Social media">
-      <a href="https://instagram.com/[mocktail-brand]" aria-label="Instagram">Instagram</a>
-      <a href="https://twitter.com/[mocktail-brand]" aria-label="Twitter">Twitter</a>
-      <a href="mailto:hello@mocktail-brand.com" aria-label="Email us">Email</a>
-    </nav>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <time datetime="2025">2025</time> GIT 450 WEB TEAM FALL B. All rights reserved.</p>
+      <div class="social">
+        <a href="https://instagram.com/mocktail-brand">Instagram</a>
+        <a href="https://twitter.com/mocktail-brand">Twitter</a>
+        <a href="mailto:hello@mocktail-brand.com">Email</a>
+      </div>
+    </div>
   </footer>
 
-  <!-- Responsive Script Link -->
   <script src="script.js" defer></script>
 </body>
 </html>

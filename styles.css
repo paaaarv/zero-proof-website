@@ -218,10 +218,87 @@ body {
     #primary-nav.is-open { transition: transform .2s ease, opacity .2s ease, visibility 0s; }
   }
 }
-/* ========== Hero ========== */
+/* ========== HERO Section ========== */
+.hero {
+  text-align: center;
+  padding: var(--space-6) 0 var(--space-6);
+  background: linear-gradient(180deg, #1b2030 0%, #0f1115 100%);
+}
+.hero h1 {
+  font-size: var(--font-size-3);
+  margin-bottom: var(--space-2);
+}
+.hero-sub {
+  font-size: var(--font-size-1);
+  color: var(--muted);
+  margin-bottom: var(--space-4);
+}
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
 
-/* ========== Footer ========== */
+/* ========== PRODUCTS ========== */
+.products {
+  padding: var(--space-6) 0;
+}
+.products h2 {
+  font-size: var(--font-size-2);
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.card-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.card-body {
+  padding: var(--space-3);
+}
+.card h3 {
+  margin-bottom: var(--space-2);
+  font-size: 1.25rem;
+}
+.card p {
+  margin-bottom: var(--space-3);
+}
 
+/* ========== FOOTER ========== */
+.site-footer {
+  padding: var(--space-4) 0;
+  text-align: center;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+}
+.site-footer .social {
+  margin-top: var(--space-2);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+}
+.site-footer .social a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.site-footer .social a:hover {
+  color: var(--accent-strong);
+}
 
 /* ========== Media Queries ========== */
 
