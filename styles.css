@@ -138,7 +138,46 @@ body {
 }
 
 /* ========== Header & Nav ========== */
+.site-header {
 
+}
+.header-row {
+
+}
+.brand {
+
+}
+
+/* Primary nav */
+#primary-nav {
+
+}
+#primary-nav a {
+
+}
+#primary-nav a[aria-current="page"], #primary-nav a:hover { color: var(--accent-strong); }
+#primary-nav a:focus-visible { outline: 2px solid var(--accent); }
+
+/* Mobile nav button */
+.nav-toggle {
+
+}
+.nav-toggle-text { font-size: 0.9rem; }
+.nav-toggle-box { display: inline-flex; flex-direction: column; gap: 3px; }
+.nav-toggle-bar { width: 18px; height: 2px; background: var(--text); border-radius: 2px; }
+
+/* Mobile menu sheet */
+@media (max-width: 900px) {
+  .header-row { grid-template-columns: 1fr auto; }
+  .nav-toggle { display: inline-flex; }
+  #primary-nav {
+
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+
+  }
+}
 /* ========== Hero ========== */
 
 /* ========== Footer ========== */
