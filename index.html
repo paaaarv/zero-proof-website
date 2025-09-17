@@ -31,14 +31,28 @@
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header role="banner">
-    <nav aria-label="Primary">
-      <a href="/" aria-current="page">Home</a>
-      <a href="/team.html">Team</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/checkout.html">Checkout</a>
-    </nav>
-  </header>
+    <header role="banner" class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="/">[Brand Name]</a>
+
+            <!-- Mobile nav button -->
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+            <span class="nav-toggle-box" aria-hidden="true">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </span>
+            <span class="nav-toggle-text">Menu</span>
+            </button>
+
+            <nav id="primary-nav" aria-label="Primary">
+            <a href="/" aria-current="page">Home</a>
+            <a href="/team.html">Team</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/checkout.html">Checkout</a>
+            </nav>
+        </div>
+    </header>
 
   <main id="main">
     <section aria-labelledby="hero-title">
