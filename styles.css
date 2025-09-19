@@ -316,3 +316,64 @@ body {
 }
 
 /* ========== Utility ========== */
+
+/* ========== CART ========== */
+
+#cart-page-main {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+#cart-heading {
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+
+hr {
+  width: 100%;
+}
+
+#your-cart, #order-summary {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: var(--elev);
+  color: var(--accent-strong)
+}
+
+#your-cart {
+  width: 65%;
+}
+
+#order-summary {
+  width: 35%;
+  height: 50%;
+}
+
+#your-cart, #order-summary {
+  border: 1px solid var(--accent-strong);
+  padding: 1.5rem;
+}
+
+#grand-total button {
+  border: 1px solid var(--accent-strong);
+  width: 100%;
+  justify-self: center;
+  border-radius: 4px;
+  height: 1.75rem;
+  margin: .5rem 0;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#grand-total button:hover {
+  box-shadow: inset 4px 4px 8px var(--muted), inset -4px -4px 8px var(--muted);
+  transition: .5s;
+  transform: translateY(1px);
+}
+
