@@ -279,6 +279,70 @@ body {
   margin-bottom: var(--space-3);
 }
 
+/* ========== ABOUT US SECTION ========= */
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--bg);
+  width: 111px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: #B6B6B6;
+
+}
+
+.hero {
+  background: url("https://placehold.co/1200x600") no-repeat center center/cover;
+  color: var(--bg);
+}
+
+.story {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.newsletter form {
+  margin-top: 1rem;
+}
+
+.newsletter label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#email {
+  padding: 0.5rem;
+  width: 250px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  /* The button in the figma file is black and it blends in with the body background color. I chose a light gray for now. */
+  background-color: lightgray;
+  color: var(--bg);
+}
+
+
 /* ========== FOOTER ========== */
 .site-footer {
   padding: var(--space-4) 0;

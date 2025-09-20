@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="GIT450 Web Dev Team">
-        <meta name="description" content="This webpage discusses our story of the mocktail in addition to the milestones that the company has accomplished.">
-        <meta name="keywords" content="mocktail, milestones, story, title, year.">
+        <meta name="description" content="This webpage discusses our story of the mocktails in addition to the milestones that the company has accomplished.">
+        <meta name="keywords" content="mocktails, milestones, story, title, year.">
         <title>About Us Page</title>
         <link href="styles.css" rel="stylesheet">
     </head>
@@ -23,18 +23,19 @@
         </header>
         <main>
             <!--Moved H1 (previously in header) to the main section.-->
-            <section>
+            <section class="hero">
                 <h1>About Us</h1>
-                <img src="https://placehold.co/600x400" alt="This is a placeholder background image for the first heading.">
+                <!--For the background image for the about us, I moved the placeholder background image into the CSS file. See Line 302 where it starts. I did just have the Image URL here into the HTML.-->
             </section>
         <!--H2 Begins Here.-->
-        <section>
+        <section class="story">
         <h2>Our Story</h2>
         <p>Lorem Ipsum dolor</p>
         </section>
         <section>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia harum quasi autem, cumque sit labore amet eius vero nesciunt ratione quod incidunt impedit eum fugiat temporibus! Ipsam possimus harum est.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, rerum explicabo? Accusantium perspiciatis, distinctio deserunt sapiente cum voluptatibus. Ipsum maxime vel aliquam quos atque laboriosam, quod totam sint excepturi mollitia.</p>
+        <img src="https://placehold.co/600x400" alt="This is a placeholder image.">
         </section>
         <!--Milestone section-->
         <section>
@@ -62,16 +63,19 @@
                             </div>
                             </section>
         
-        <section>
+        <section class="newsletter">
             <!--Newsletter section-->
+            <!--I made edits to the input as I got an error in VS Code. The only way the error cleared up is if I added the label for the email.-->
             <h3>Stay in the Know</h3>
-            <label for="email" name="email" id="email"></label>
-            <input type="email" placeholder="you@example.com">
-            <button>Submit</button>
+            <form>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+            <button type="submit">Submit</button>
+            </form>
         </section>
         </main>
         <footer>
-            <div class="footer-links">
+            <div>
                 <ul>
                     <li><a href="#">FAQS</a></li>
                     <li><a href="#">About Us</a></li>
@@ -83,7 +87,7 @@
                 </ul>
             </div>
             <!--These SVG Icons were retrieved from: https://icons.getbootstrap.com-->
-            <div class="footer-social-media">
+            <div>
             <ul>
                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
@@ -96,6 +100,7 @@
                   </svg></li>
             </ul>
             </div>
+            
 
         </footer>
     </body>
