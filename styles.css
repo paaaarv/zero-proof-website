@@ -279,7 +279,7 @@ body {
   margin-bottom: var(--space-3);
 }
 
-/* ========== ABOUT US SECTION ========= */
+/* ========== ABOUT US SECTION (Sebastian's Task) ========= */
 header nav ul {
   display: flex;
   justify-content: flex-end;
@@ -298,7 +298,7 @@ header nav ul li a {
   background-color: #B6B6B6;
 
 }
-
+/* The background could be bigger */
 .hero {
   background: url("https://placehold.co/1200x600") no-repeat center center/cover;
   color: var(--bg);
@@ -306,6 +306,12 @@ header nav ul li a {
 
 .story {
   padding: 3rem 2rem;
+
+}
+
+.story h2 {
+  text-align: center;
+  margin-bottom: 2rem;
 
 }
 
@@ -319,6 +325,7 @@ header nav ul li a {
 
 .story-text {
   flex: 1;
+  text-align: left;
 }
 
 .story-text h2 {
@@ -366,6 +373,48 @@ button {
   background-color: lightgray;
   color: var(--bg);
 }
+/* beginning styles of footer */
+footer {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+footer > div:first-child ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 1rem 3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2rem;
+}
+
+footer > div:first-child ul li {
+  margin: 0.3rem 0;
+}
+
+footer > div:first-child ul li a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+  color: var(--muted);
+}
+
+/* social icons */
+footer > div:last-child ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer > div:last-child ul li svg {
+  width: 24px;
+  height: 24px;
+  
+}
+
 
 
 /* ========== FOOTER ========== */
