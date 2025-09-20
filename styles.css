@@ -564,3 +564,15 @@ hr {
   transform: translateY(1px);
 }
 
+@media (max-width: 768px) {
+  
+    #cart-page-main {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #your-cart, #order-summary {
+      width: 90%;
+    }
+
+  }
