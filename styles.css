@@ -324,6 +324,14 @@ a{
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 15px;
+}
+
+.contact p:nth-of-type(2){
+  font-weight: 300;
+  font-size: 15px;
 }
 
 .right{
@@ -337,12 +345,96 @@ a{
   font-size: 35px;
 }
 
+.right .item {
+  display: grid;
+  grid-template-columns: 80px 1fr 40px auto;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--accent-strong);
+}
+
+.right .item:last-of-type {
+  border-bottom: none;
+}
+
+.right .item p {
+  margin: 0;
+}
+
+.right .item strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.right .item small {
+  font-size: 14px;
+  color: #444;
+}
+
+.right .totals {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.right .totals hr {
+  grid-column: 1 / -1;
+  border: 0;
+  border-top: 1px solid var(--accent-strong);
+  margin: 15px 0;
+}
+
+.right .totals p {
+  margin: 0;
+}
+
+.right .total {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  border: 0.5px solid var(--accent-strong);
+  padding: 15px;
+  font-weight: bold;
+}
+
+.right > div:first-of-type, .right > h2{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.right > div:first-of-type{
+  margin-right: 15px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 15px;
+}
+
+.item > p:last-of-type{
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.item > div:nth-of-type(2){
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: center;
+}
+
 strong{
   font-weight: bold;
 }
 
 .total{
   border: 0.5px solid var(--accent-strong);
+  padding: 20px;
 }
 
 .left .btn{
@@ -351,6 +443,31 @@ strong{
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 20px 80px;
+}
+
+.order-header{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact p:nth-of-type(even) {
+  border-bottom: 1px solid var(--accent-strong);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  grid-column: 2;
+}
+
+.contact p:nth-of-type(odd) {
+  border-bottom: 1px solid var(--accent-strong);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  grid-column: 1;
+}
+
+.contact p:last-of-type,
+.contact p:nth-last-of-type(2) {
+  border-bottom: none;
 }
 
 
