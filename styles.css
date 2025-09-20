@@ -304,6 +304,11 @@ body {
 }
 
 /* ========== Checkout Styles ========== */
+/*==== Back to Cart ====*/
+.back-to-cart a{
+  text-decoration: none;
+}
+
 .checkout-page{
   display: flex;
   flex-direction: row;
