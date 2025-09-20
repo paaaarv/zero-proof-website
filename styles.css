@@ -535,9 +535,14 @@ strong{
   border-radius: 4px;
   border: solid 1.5px
 }
+
 .checkout select{
   border: solid 1.5px;
   border-radius: 4px;
+}
+
+.checkout select{
+  appearance: base-select;
 }
 /*==== Shipping ====*/
 #shipping form{
@@ -666,13 +671,13 @@ label#exp-date{
 
 select#exp-date-month{
   grid-area: 6 / 1 / 7 / 2;
-  width: 50%;
+  width: 60%;
   justify-self: end;
 }
 
 select#exp-date-year{
   grid-area: 6 / 2 / 7 / 3;
-  width: 50%;
+  width: 60%;
 }
 
 label#card-cvc{
