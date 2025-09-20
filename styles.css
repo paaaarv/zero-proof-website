@@ -217,9 +217,7 @@ body {
 }
 /* ========== HERO Section ========== */
 .hero {
-  text-align: center;
-  padding: var(--space-6) 0 var(--space-6);
-  background: linear-gradient(180deg, #1b2030 0%, #0f1115 100%);
+  background: purple;
 }
 .hero h1 {
   font-size: var(--font-size-3);
@@ -230,12 +228,7 @@ body {
   color: var(--muted);
   margin-bottom: var(--space-4);
 }
-.cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-3);
-}
+
 
 /* ========== PRODUCTS ========== */
 .products {
