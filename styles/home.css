@@ -33,7 +33,6 @@
     width: 20vw;
   height: 20vw;
   border-radius: 50%;
-  background: blue;
   z-index: 1000; 
 }
 
@@ -44,4 +43,20 @@
     right: 0; 
     top: 0;
     clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0 100%); 
+}
+#ingredients h3{
+    text-transform: uppercase;
+}
+
+#ingredients-container{
+    display: flex; 
+    justify-content: space-evenly; 
+    margin: 50px 0;
+}
+
+.ingredient img{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    overflow: hidden;
 }
