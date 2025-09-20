@@ -604,7 +604,12 @@ strong{
 #cart-heading {
   font-weight: bold;
   font-size: 1.3rem;
+  color: black;
 
+}
+
+h3, p, i, h4 {
+  color: black;
 }
 
 hr {
@@ -616,8 +621,6 @@ hr {
   flex-direction: column;
   font-weight: bold;
   padding: 1rem;
-  background-color: var(--elev);
-  color: var(--accent-strong);
   border-radius: 4px;
 }
 
@@ -659,12 +662,12 @@ hr {
 }
 
 #your-cart, #order-summary {
-  border: 1px solid var(--accent-strong);
+  border: 1px solid black;
   padding: 1.5rem;
 }
 
 #grand-total button {
-  border: 1px solid var(--accent-strong);
+  border: 1px solid black;
   width: 100%;
   justify-self: center;
   border-radius: 4px;
