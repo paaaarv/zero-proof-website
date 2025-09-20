@@ -305,10 +305,35 @@ header nav ul li a {
 }
 
 .story {
-  text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 2rem;
+
 }
 
+.story-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-text h2 {
+ margin-bottom: 1rem;
+}
+
+.story-image {
+  flex: 1;
+  
+}
+
+.story-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
 .newsletter {
   text-align: center;
   padding: 2rem 1rem;
