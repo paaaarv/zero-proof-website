@@ -60,3 +60,9 @@
     border-radius: 50%;
     overflow: hidden;
 }
+
+#carousel{
+    background-color: grey; 
+    width: 100%; 
+    text-align: center;
+}
