@@ -495,6 +495,90 @@ strong{
   color: var(--accent-strong);
 }
 
+/* ========== Mobile (iPhone 14/15) ========== */
+/* Confirmation Page */
+@media screen and (max-width: 430px) {
+  .left-right {
+    display: block;
+    margin: 5px;
+  }
+
+  .left h1 {
+    display: none;
+  }
+
+  .order-header p strong{
+    font-size: 15px;
+  }
+
+  .order-updates h2 {
+    font-size: 22px;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .right h2 {
+    font-size: 24px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .left .btn {
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+  }
+
+  .big-box{
+    width: 100% !important;
+  }
+
+  /* HIDE IF NOT DONE RIGHT */
+  .progress-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .progress-tracker .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .progress-tracker .circle {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--accent-strong);
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .progress-tracker .circle.active {
+    background-color: black;
+  }
+
+  .progress-tracker .line {
+    flex: 1;
+    height: 2px;
+    background-color: var(--accent-strong);
+    margin: 0;
+  }
+
+  .progress-tracker p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
+
 /* ========== Media Queries ========== */
 
 
