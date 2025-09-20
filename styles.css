@@ -539,7 +539,6 @@ strong{
     width: 100% !important;
   }
 
-  /* HIDE IF NOT DONE RIGHT */
   .progress-tracker {
     display: flex;
     justify-content: space-between;
