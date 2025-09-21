@@ -472,6 +472,11 @@ strong{
 }
 
 /* ========== BLOG ========== */
+
+.mix-it-up {
+  padding: var(--space-6) 0;
+  background: linear-gradient(180deg, #1b2030 0%, #0f1115 100%);
+}
 .scroll-wrapper {
   display: flex;
   align-items: center;
