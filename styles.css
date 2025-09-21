@@ -276,6 +276,309 @@ body {
   margin-bottom: var(--space-3);
 }
 
+/* ========== ABOUT US SECTION (Sebastian’s Task) ========= */
+.header-nav {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-zero {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+  color: #fff;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.nav-menu {
+  display: none;
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 8px;
+  top: 100%;
+  right: 1rem;
+  z-index: 10;
+  position: absolute;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin-bottom: 1rem;
+}
+
+.nav-menu li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-toggle:checked + .menu-icon + .nav-menu {
+  display: block;
+}
+
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--bg);
+  width: 111px;
+  height: 35px;
+  flex-shrink: 0;
+  padding: 3px;
+  background-color: #B6B6B6;
+}
+
+
+/* The background could be bigger */
+.hero {
+  background: url("https://placehold.co/1200x600") no-repeat center center/cover;
+  color: var(--bg);
+}
+/* Beginning of h2 */
+.story {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.story h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #000;
+}
+.intro {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
+.story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.story-text {
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+.story-text h2 {
+ margin-bottom: 2rem;
+ font-size: 2rem;
+ text-align: center;
+}
+/*Change this later if problems */
+.story-text p {
+line-height: 1.6;
+}
+.story-image {
+  flex: 1;
+}
+.story-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+/* Beginning of the milestone section */
+
+.milestones {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #000;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* This is the vertical stick */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #000;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.milestone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.milestone::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: #666;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.milestone::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  z-index: 1;
+  transform: translateY(-50%);
+  background-color: #666;
+  
+}
+
+/* Image styling */
+.milestone-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+/* Content of title and year */
+.milestone-content {
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 250px;
+}
+
+/* Images being placed in their respected spots. Both 1 and 3 are on the left side.*/ 
+.milestone:nth-child(1),
+.milestone:nth-child(3) {
+  align-self: flex-start;
+  text-align: left;
+}
+/* Image on the right side */
+.milestone:nth-child(2) {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* Beginning of newsletter styles */
+.newsletter {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #F2F2F2;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.newsletter form {
+  margin-top: 1rem;
+}
+.newsletter label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+#email {
+  padding: 0.5rem;
+  width: 250px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  /* The button in the figma file is black and it blends in with the body background color. I chose a light gray for now. */
+  background-color: lightgray;
+  color: var(--bg);
+}
+
+/* beginning styles of footer */
+.footer {
+  padding: 2rem;
+  background-color: #666;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 4rem;
+}
+
+.link-column {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link-column a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.link-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-social-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-social {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social svg {
+  width: 35px;
+  height: 35px;
+  transition: fill 0.3s ease;
+  color: #fff;
+}
+
 /* ========== FOOTER ========== */
 .site-footer {
   padding: var(--space-4) 0;
