@@ -690,6 +690,7 @@ button {
 
 /* ========== Tablet ========== */
 /* ========= ABOUT US TABLET MEDIA QUERY ====== */
+/* Look at mobile styles for the about section I need to recode the about us section. */
 @media screen and (min-width: 768px) {
 
   /* Styles for the header */
@@ -746,45 +747,48 @@ button {
 
 
   /* Styles for "Our Story" section */
+  .story {
+    padding: 3rem 1rem;
+    text-align: center;
+
+  }
+
+  .story-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+  }
+
+  .story-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro {
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.5rem;
+  }
+
   .story-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   .story-text {
-    display: contents;
-    
-  }
-
-  .story-text h2,
-  .story-text .intro,
-  .story-text p:not(.intro) {
     grid-column: 1;
-    text-align: center;
+    max-width: none;
+
   }
 
-  .story-text .story-image {
+  .story-image-container {
     grid-column: 2;
-    justify-self: end;
-    height: auto;
-    display: block;
-    max-width: 100%;
+    justify-self: center;
   }
+  
 
-  .story-text h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .story-text .intro {
-    margin-bottom: 0.5rem;
-  }
-
-  .story-text p {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
 
   /* Styling for the milestone section */
 
@@ -792,6 +796,16 @@ button {
     font-size: 2rem;
     font-weight: bold;
 
+  }
+   /* This section is for the horizontal stick thats suppose to connect to the circle placeholder images. This is as far as I have gotten but I can't seem to get it right. I can also copy and paste this code to the mobile phone section as well. */
+  .milestone::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
   }
 
   .milestone-content h3 {
