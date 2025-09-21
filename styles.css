@@ -471,6 +471,122 @@ strong{
   display: none;
 }
 
+/* ========== BLOG ========== */
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 0.5rem;
+}
+
+.card-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.recipe-card {
+  flex: 0 0 180px;
+  background: #eee;
+  border: 1px solid #ccc;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+.image-placeholder {
+  background: #ccc;
+  margin: 5px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #333;
+}
+
+.recipe-card h3,
+.recipe-card p,
+.recipe-card button {
+  margin: 5px;
+}
+
+.recipe-card h3 {
+  font-weight: bold;
+}
+
+.scroll-btn {
+  background: #ccc;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.now-you-know {
+  background-color: lightgray;
+  color: black;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'serif';
+  
+}
+
+.now-you-know h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+  letter-spacing: 0.5px;
+}
+
+.email-signup {
+  
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.email-signup label {
+  font-size: 1rem;
+  color: black;
+}
+.email-signup input[type="email"] {
+padding: .75rem 1rem;
+width: 100%;
+border: 1px solid #555;
+border-radius: 6px;
+color: black;
+font-size: 1rem;
+font-family: inherit;
+}
+
+.email-signup input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.email-signup button {
+  background-color: lightgray;
+  color: white;
+  border: none;
+  padding: .75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.email-signup button:hover {
+  background-color: gray;
+}
+
 
 /* ========== FOOTER ========== */
 .site-footer {
