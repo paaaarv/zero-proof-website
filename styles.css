@@ -767,13 +767,13 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ff4f00; /* blue highlight */
+  color: #ff4f00; 
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   text-decoration-color: #e86100;
 }
 
-/* Extras (search + social icons) */
+/* Extras */
 .extras {
   display: flex;
   align-items: center;
@@ -789,18 +789,6 @@ body {
   transition: border 0.3s ease;
 }
 
-
-.extras a {
-  color: #333;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
-}
-
-.extras a:hover {
-  color: #e67e22;
-}
-
-/* Hide hamburger by default (desktop only) */
 #hamburger-nav {
   display: none;
 }
@@ -808,9 +796,11 @@ body {
 /* Hamburger menu styles */
 .hamburger-menu {
   position: relative;
+  z-index: 1001;
   display: inline-block;
 }
 
+/* Hamburger icon */
 .hamburger-icon {
   display: flex;
   flex-direction: column;
@@ -818,25 +808,32 @@ body {
   height: 24px;
   width: 30px;
   cursor: pointer;
+  padding: 5px;
 }
 
+/* Hamburger bars */
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: #333;
+  border-radius: 1px;
   transition: all 0.3s ease-in-out;
 }
 
+/* Menu dropdown */
 .menu-links {
   position: absolute;
-  top: 100%;
+  top: 110%;
   right: 0;
-  background-color: white;
-  width: fit-content;
+  background-color: #fff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); 
+  width: 200px; 
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   font-family: 'EB Garamond', serif;
+  padding: 0;
 }
 
 .menu-links li {
@@ -845,16 +842,25 @@ body {
 
 .menu-links a {
   display: block;
-  padding: 10px;
-  text-align: center;
+  padding: 12px 15px;
+  text-align: left;
   font-size: 1.5rem;
-  color: black;
+  color: #333;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+.menu-links a:hover {
+  background-color: #f7f7f7;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  color: #e67e22;
+}
+
+/* Open state */
 .menu-links.open {
-  max-height: 300px;
+  max-height: 500px;
+  padding: 10px 0;
 }
 
 /* Hamburger animation */
@@ -909,7 +915,125 @@ body {
   }
 }
 
-/* ========== FOOTER ========== */
+/* Footer */
+.footer {
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  padding: 2rem 0;
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer .logo {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #333;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e67e22;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+/* Newsletter Signup */
+.newsletter {
+  text-align: center;
+}
+
+.newsletter p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.95rem;
+  font-family: 'EB Garamond', serif;
+}
+
+.newsletter-form button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background: #e67e22;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #cf650f;
+}
+
+/* Footer Bottom Section */
+.footer-socials a i {
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover i {
+  color: #e67e22;
+}
+
+.footer-bottom {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  color: #777;
+}
 
 
-/* ========== FOOTER ========== */
+
