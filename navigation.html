@@ -33,30 +33,47 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<!-- Header / Navbar -->
 <header class="navbar">
   <div class="container">
+    <!-- Logo -->
     <a href="#" class="logo">BRAND NAME</a>
-    <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Our Menu</a>
-      <a href="#">Blog</a>
-      <a href="#">Checkout</a>
+
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </nav>
+
     <div class="extras">
       <input type="text" placeholder="Search recipes..." />
     </div>
-    <div class="nav-icons">
-      <a href="#"><i class="bx bx-user"></i></a>
-      <a href="#"><i class="bx bx-shopping-bag"></i></a>
-    <!-- Menu Icon -->
-    <div class="menu-icon">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
+
+    <!-- Hamburger Navigation (mobile) -->
+    <nav id="hamburger-nav">
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#" onclick="toggleMenu()">Recipes</a></li>
+          <li><a href="#" onclick="toggleMenu()">About</a></li>
+          <li><a href="#" onclick="toggleMenu()">Blog</a></li>
+          <li><a href="#" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
   </div>
 </header>
+
 
 </body>
 </html>

@@ -12,3 +12,12 @@ if (toggle && nav) {
 // Respect reduced motion (no animations here yet, but this is where we gate them)
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 // if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { /* no-op */ }
+
+
+
+function toggleMenu () {
+    const menu = document.querySelector(".menu-links")
+    const icon = document.querySelector(".hamburger-icon")
+    menu.classList.toggle("open");
+    icon.classList.toggle("open");
+}
