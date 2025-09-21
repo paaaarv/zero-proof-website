@@ -496,6 +496,7 @@ strong{
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
+  border-radius: 6px;
 }
 
 .image-placeholder {
@@ -513,6 +514,10 @@ strong{
 .recipe-card p,
 .recipe-card button {
   margin: 5px;
+}
+
+.recipe-card h3 {
+  font-weight: bold;
 }
 
 .scroll-btn {
