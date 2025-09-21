@@ -691,6 +691,61 @@ button {
 /* ========== Tablet ========== */
 /* ========= ABOUT US TABLET MEDIA QUERY ====== */
 @media screen and (min-width: 768px) {
+
+  /* Styles for the header */
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 100;
+    position: relative;
+  }
+
+  /* Styles for the navigation */
+  /* Note: I had to use transparent background color as the navigation links had a background color of the dropdown menu from the hamburger menu from the mobile screen. This is a temporary fix. */
+
+  nav {
+    margin: 0;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    
+  }
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: transparent;
+
+  }
+
+  .nav-menu ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-icon {
+    display: none;
+
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+
+  /* Styles for "Our Story" section */
   .story-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
