@@ -689,6 +689,31 @@ button {
 
 
 /* ========== Tablet ========== */
+@media screen and (min-width: 768px) {
+  .story-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .story-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .story-image  {
+    flex: 1;
+    max-width: 50%;
+    align-self: flex-start;
+    height: auto;
+    display: block;
+    margin-left: auto;
+  }
+}
 
 /* ========== Desktop ========== */
 
