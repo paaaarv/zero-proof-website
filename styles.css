@@ -783,41 +783,66 @@ body {
 
 /* ==========NAVIGATION NAVBAR RESPONSIVE ========== */
 @media (max-width: 1080px) {
-  .social-icons a i {
-    font-size: 28px;
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 
+/* 🔹 770px and below */
 @media (max-width: 770px) {
-  .social-icons {
-    gap: 12px;
+  h1 {
+    font-size: 2.2rem;
   }
-  .social-icons a i {
-    font-size: 26px;
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .sidebar {
+    display: none;
   }
 }
 
+/* 🔹 700px and below */
 @media (max-width: 700px) {
-  .social-icons {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .social-icons a i {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 500px) {
-  .social-icons {
+  header {
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
   }
-  .social-icons a i {
-    font-size: 22px;
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  h1 {
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
-
+/* 🔹 500px and below */
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    text-align: center;
+  }
+}
 /* ========== FOOTER ========== */
 
 
