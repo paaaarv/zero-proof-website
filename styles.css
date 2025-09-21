@@ -689,6 +689,7 @@ button {
 
 
 /* ========== Tablet ========== */
+/* ========= ABOUT US TABLET MEDIA QUERY ====== */
 @media screen and (min-width: 768px) {
   .story-content {
     display: grid;
@@ -728,6 +729,83 @@ button {
   .story-text p {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+
+  /* Styling for the milestone section */
+
+  .milestones h2 {
+    font-size: 2rem;
+    font-weight: bold;
+
+  }
+
+  .milestone-content h3 {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .milestone-image {
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+
+  /* Styling for the newsletter section */
+  .newsletter h3 {
+    font-size: 2rem;
+  }
+
+  /* Styling of footer for tablet */
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 768px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .link-column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .link-column li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .footer-social-wrapper {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-social li svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
   }
 }
 
