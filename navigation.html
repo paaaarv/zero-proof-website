@@ -16,86 +16,36 @@
     
 </head>
 <body>
+  <nav id="desktop-nav">
+    <div class="nav-container">
+      <div class="logo">Logo</div>
 
-<!-- Header / Navbar -->
-<header class="navbar">
-  <div class="container">
-    <!-- Logo -->
-    <a href="#" class="logo">BRAND NAME</a>
-
-    <!-- Desktop Navigation (PC) -->
-    <nav id="desktop-nav">
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Recipes</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="extras">
-      <input type="text" placeholder="Search recipes..." />
-    </div>
-
-    <!-- Hamburger Navigation (Mobile ONLY!) -->
-    <nav id="hamburger-nav">
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#" onclick="toggleMenu()">Recipes</a></li>
-          <li><a href="#" onclick="toggleMenu()">About</a></li>
-          <li><a href="#" onclick="toggleMenu()">Blog</a></li>
-          <li><a href="#" onclick="toggleMenu()">Contact</a></li>
-        </div>
+      <!-- Hamburger Button -->
+      <div class="hamburger" aria-label="Menu" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </nav>
-  </div>
-</header>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container footer-container">
-    <!-- Footer Logo -->
-    <a href="#" class="logo">BRAND NAME</a>
-
-    <!-- Footer Links -->
-    <ul class="footer-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Recipes</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-
-    <!-- Newsletter Signup Section -->
-    <div class="newsletter">
-      <p>Subscribe to our newsletter</p>
-      <form action="#" method="post" class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
+      <ul class="nav-links">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#about.html">About</a></li>
+        <li>
+          <a href="#cart" class="cart" aria-label="Shopping Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <circle cx="6" cy="19" r="2" />
+              <circle cx="17" cy="19" r="2" />
+              <path d="M17 17h-11v-14h-2" />
+              <path d="M6 5h14l-1 7h-13" />
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- Box Icons -->
-    <div class="footer-socials">
-      <a href="#"><i class="bx bxl-facebook"></i></a>
-      <a href="#"><i class="bx bxl-instagram"></i></a>
-      <a href="#"><i class="bx bxl-twitter"></i></a>
-      <a href="#"><i class="bx bxl-pinterest"></i></a>
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>&copy; GIT 450 WEB TEAM FALL A. All rights reserved.</p>
-  </div>
-</footer>
 
 <script src="script.js"></script>
 </body>

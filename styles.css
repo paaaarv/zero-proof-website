@@ -700,340 +700,160 @@ hr {
 
 
 
-/* ==========NAVIGATION NAVBAR ========== */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-
-body {
+/* ------------------ RESET DEFAULT SPACING ------------------ */
+* {
   margin: 0;
-  font-family: 'EB Garamond', serif;
-  background: #fff;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Navbar */
-.navbar {
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 1rem 0;
-  position: sticky;
+html, body {
+  height: 100%;
+  font-family: "Cinzel", serif;
+  line-height: 1;
+}
+
+/* ------------------ NAVIGATION ------------------ */
+nav {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  margin: 0;
+  background-color: #444;
+  position: fixed; /* stick to top */
   top: 0;
+  left: 0;
   z-index: 1000;
-  justify-content: space-around;
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.nav-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
 }
 
-/* Logo */
+/* ------------------ LOGO ------------------ */
 .logo {
-  font-size: 2rem;
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-  letter-spacing: 1px;
+  font-size: 1.2rem;
+  color: black;
+  background: #999;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
 .logo:hover {
-  cursor: pointer;
+  background: #bbb;
 }
 
-/* Desktop nav */
-#desktop-nav,
+/* ------------------ NAV LINKS ------------------ */
 .nav-links {
   display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.nav-links {
+  gap: 1.5rem;
   list-style: none;
-  font-size: 1.5rem;
-}
-
-.nav-links a {
-  color: #333;
-  text-decoration: none;
-  font-family: 'Cinzel', serif;
-  font-weight: 500;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ff4f00; 
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  text-decoration-color: #e86100;
-}
-
-/* Extras */
-.extras {
-  display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
-.extras input {
-  font-family: 'EB Garamond', serif;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
+.nav-links a:not(.cart) {
+  background: #999;
+  padding: 0.5rem 2rem;
   border-radius: 20px;
-  outline: none;
-  transition: border 0.3s ease;
-}
-
-#hamburger-nav {
-  display: none;
-}
-
-/* Hamburger menu styles */
-.hamburger-menu {
-  position: relative;
-  z-index: 1001;
-  display: inline-block;
-}
-
-/* Hamburger icon */
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-  padding: 5px;
-}
-
-/* Hamburger bars */
-.hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background-color: #333;
-  border-radius: 1px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Menu dropdown */
-.menu-links {
-  position: absolute;
-  top: 110%;
-  right: 0;
-  background-color: #fff; 
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25); 
-  width: 200px; 
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-  font-family: 'EB Garamond', serif;
-  padding: 0;
-}
-
-.menu-links li {
-  list-style: none;
-}
-
-.menu-links a {
-  display: block;
-  padding: 12px 15px;
-  text-align: left;
-  font-size: 1.5rem;
-  color: #333;
+  color: black;
+  font-size: 1.2rem;
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.menu-links a:hover {
-  background-color: #f7f7f7;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  color: #e67e22;
+.nav-links a:not(.cart):hover {
+  background: #bbb;
 }
 
-/* Open state */
-.menu-links.open {
-  max-height: 500px;
-  padding: 10px 0;
+.nav-links .cart {
+  background: none;
+  padding-right: 1.2rem;
+  display: flex;
+  transition: all 0.3s ease;
 }
 
-/* Hamburger animation */
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
+.nav-links .cart:hover {
+  transform: scale(1.1);
+  stroke: #bbb;
 }
 
-.hamburger-icon.open span:nth-child(2) {
+.nav-links .cart .icon {
+  width: 30px;
+  height: 30px;
+  stroke: #999;
+}
+
+.nav-links li:last-child {
+  margin-left: 0.2rem;
+}
+
+/* ------------------ HAMBURGER MENU ------------------ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
+  transition: all 0.4s ease; /* smooth animation */
+}
+
+/* ------------------ MOBILE RESPONSIVE ------------------ */
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    flex-direction: column;
+    background-color: #444;
+    padding-top: 5rem;
+    gap: 2rem;
+    transition: right 0.5s ease; /* smooth slide */
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin-left: 0;
+  }
+
+  .nav-links a:not(.cart) {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* ------------------ HAMBURGER ANIMATION ------------------ */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Reset states */
-.hamburger-icon span:first-child {
-  transform: none;
+/* ------------------ PAGE CONTENT ADJUSTMENT ------------------ */
+body {
+  padding-top: 70px; /* pushes content below fixed navbar */
 }
-.hamburger-icon span:nth-child(2) {
-  opacity: 1;
-}
-.hamburger-icon span:last-child {
-  transform: none;
-}
-
-/* ==========NAVIGATION NAVBAR RESPONSIVE ========== */
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  .extras {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .menu-links a {
-    font-size: 1.2rem;
-    padding: 8px;
-  }
-}
-
-/* Footer */
-.footer {
-  background: #f9f9f9;
-  border-top: 1px solid #eee;
-  padding: 2rem 0;
-  font-family: 'EB Garamond', serif;
-  text-align: center;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.footer .logo {
-  font-family: 'Cinzel', serif;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-text {
-  font-size: 1rem;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer-links a {
-  color: #333;
-  font-size: 1.3rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #e67e22;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-}
-
-/* Newsletter Signup */
-.newsletter {
-  text-align: center;
-}
-
-.newsletter p {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.newsletter-form input {
-  padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  outline: none;
-  font-size: 0.95rem;
-  font-family: 'EB Garamond', serif;
-}
-
-.newsletter-form button {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 4px;
-  background: #e67e22;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.newsletter-form button:hover {
-  background: #cf650f;
-}
-
-/* Footer Bottom Section */
-.footer-socials a i {
-  color: #333;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.footer-socials a:hover i {
-  color: #e67e22;
-}
-
-.footer-bottom {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-}
-
-.footer-bottom p {
-  color: #777;
-}
-
-
-

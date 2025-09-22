@@ -15,9 +15,19 @@ const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 
 
 
-function toggleMenu () {
-    const menu = document.querySelector(".menu-links")
-    const icon = document.querySelector(".hamburger-icon")
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-}
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+// Close menu automatically when a link is clicked
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
+
