@@ -84,7 +84,7 @@ table {
 
 /* ========== GLOBAL (mobile) Base ========== */
 body {
-  color: var(--text);
+  color: var(--bg);
   font-family: var(--font-sans);
   font-size: var(--font-size-0);
   line-height: 1.6;
@@ -462,6 +462,127 @@ strong{
   border-bottom: none;
 }
 
+.progress-tracker{
+  display: none;
+}
+
+/* ========== BLOG ========== */
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 0.5rem;
+}
+
+.card-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.recipe-card {
+  flex: 0 0 180px;
+  background: #eee;
+  border: 1px solid #ccc;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+.image-placeholder {
+  background: #ccc;
+  margin: 5px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #333;
+}
+
+.recipe-card h3,
+.recipe-card p,
+.recipe-card button {
+  margin: 5px;
+}
+
+.recipe-card h3 {
+  font-weight: bold;
+}
+
+.scroll-btn {
+  background: #ccc;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.now-you-know {
+  background-color: lightgray;
+  color: black;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'serif';
+  
+}
+
+.now-you-know h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+  letter-spacing: 0.5px;
+}
+
+.email-signup {
+  
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.email-signup label {
+  font-size: 1rem;
+  color: black;
+}
+.email-signup input[type="email"] {
+padding: .75rem 1rem;
+width: 100%;
+border: 1px solid #555;
+border-radius: 6px;
+color: black;
+font-size: 1rem;
+font-family: inherit;
+}
+
+.email-signup input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.email-signup button {
+  background-color: lightgray;
+  color: white;
+  border: none;
+  padding: .75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.email-signup button:hover {
+  background-color: gray;
+}
+
+
 /* ========== FOOTER ========== */
 .site-footer {
   padding: var(--space-4) 0;
@@ -485,6 +606,410 @@ strong{
   color: var(--accent-strong);
 }
 
+/* ========== Mobile (iPhone 14/15) ========== */
+/* Confirmation Page */
+@media screen and (max-width: 430px) {
+  .left-right {
+    display: block;
+    margin: 5px;
+  }
+
+  .left h1 {
+    display: none;
+  }
+
+  .order-header p strong{
+    font-size: 15px;
+  }
+
+  .order-updates h2 {
+    font-size: 22px;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .right h2 {
+    font-size: 24px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .left .btn {
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+  }
+
+  .big-box{
+    width: 100% !important;
+  }
+
+  .progress-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .progress-tracker .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .progress-tracker .circle {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--accent-strong);
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .progress-tracker .circle.active {
+    background-color: black;
+  }
+
+  .progress-tracker .line {
+    flex: 1;
+    height: 2px;
+    background-color: var(--accent-strong);
+    margin: 0;
+  }
+
+  .progress-tracker p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
+
+/* ========== Mobile (iPhone 14/15) ========== */
+/* Confirmation Page */
+@media screen and (max-width: 430px) {
+  .left-right {
+    display: block;
+    margin: 5px;
+  }
+
+  .left h1 {
+    display: none;
+  }
+
+  .order-header p strong{
+    font-size: 15px;
+  }
+
+  .order-updates h2 {
+    font-size: 22px;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .right h2 {
+    font-size: 24px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .left .btn {
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+  }
+
+  .big-box{
+    width: 100% !important;
+  }
+
+  .progress-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .progress-tracker .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .progress-tracker .circle {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--accent-strong);
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .progress-tracker .circle.active {
+    background-color: black;
+  }
+
+  .progress-tracker .line {
+    flex: 1;
+    height: 2px;
+    background-color: var(--accent-strong);
+    margin: 0;
+  }
+
+  .progress-tracker p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
+
+/* ========== Checkout Styles ========== */
+/*==== Back to Cart ====*/
+.back-to-cart a{
+  text-decoration: none;
+  color: var(--bg);
+    font-size: 1.25em;
+    position: relative;
+    right: 20px;
+    bottom: 5px;
+}
+
+.checkout-page{
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout{
+  display: flex;
+  flex-direction: column;
+}
+
+#shipping, #payment{
+  padding: 25px;
+}
+
+.checkout input, .checkout label{
+  width: 95%;
+}
+
+.checkout h2{
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 10px
+}
+
+.checkout label{
+  align-content: end;
+  justify-items: start;
+}
+
+.checkout input{
+  line-height: 40px;
+  border-radius: 4px;
+  border: solid 1.5px
+}
+
+.checkout select{
+  border: solid 1.5px;
+  border-radius: 4px;
+}
+
+.checkout select{
+  appearance: base-select;
+}
+/*==== Shipping ====*/
+#shipping form{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8,1fr);
+  row-gap: 5px;
+  width: 90%;
+}
+
+label#first-name {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+input#first-name{
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+label#last-name{
+  grid-area: 1 / 3 / 2 / 5;
+}
+
+input#last-name{
+  grid-area: 2 / 3 / 3 / 5;
+}
+
+label#my-inbox{
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+input#my-inbox{
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+label#my-phone{
+  grid-area: 3 / 3 / 4 / 5;
+}
+
+input#my-phone{
+  grid-area: 4 / 3 / 5 / 5;
+}
+
+label#my-address{
+  grid-area: 5 / 1 / 6 / 5;
+}
+
+input#my-address{
+  grid-area: 6 / 1 / 7 / 5;
+  width: 98%;
+}
+
+label#my-city{
+  grid-area: 7 / 1 / 8 / 3;
+}
+
+input#my-city{
+  grid-area: 8 / 1 / 9 / 3;
+}
+
+label#my-state{
+  grid-area: 7 / 3 / 8 / 4;
+}
+
+select#my-state{
+  grid-area: 8 / 3 / 9 / 4;
+  width: 95%;
+}
+
+label#my-zip{
+  grid-area: 7 / 4 / 8 / 5;
+}
+
+input#my-zip{
+  grid-area: 8 / 4 / 9 / 5;
+  width: 91%;
+}
+/*==== Payment ====*/
+#payment form{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr 3fr;
+  grid-template-rows: repeat(6, 1fr);
+  width: 95%;
+  column-gap: 5px;
+}
+
+label#card-name{
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+input#card-name{
+  grid-area: 2 / 1 / 3 / 4;
+}
+
+label#card-customer{
+  grid-area: 1 / 4 / 2 / 6;
+  text-align: center;
+}
+
+input#card-customer-yes{
+ grid-area: 2 / 4 / 3 / 5;
+  color: var(--accent-strong);
+  background-color: var(--bg);
+  justify-self: end;
+  width:75%;
+}
+ 
+input#card-customer-no{
+ grid-area: 2 / 5 / 3 / 6;
+ background-color: var(--accent-strong);
+ width:75%;
+}
+
+label#card-num{
+  grid-area: 3 / 1 / 4 / 6;
+}
+
+input#card-num{
+grid-area: 4 / 1 / 5 / 6;
+width: 91%;
+}
+
+label#exp-date{
+  grid-area: 5 / 1 / 6 / 3;
+  text-align: center;
+}
+
+select#exp-date-month{
+  grid-area: 6 / 1 / 7 / 2;
+  width: 60%;
+  justify-self: end;
+}
+
+select#exp-date-year{
+  grid-area: 6 / 2 / 7 / 3;
+  width: 60%;
+}
+
+label#card-cvc{
+  grid-area: 5 / 3 / 6 / 4;
+}
+
+input#card-cvc{
+  grid-area: 6 / 3 / 7 / 4;
+  width: 70%;
+}
+
+label#bill-address{
+  grid-area: 5 / 4 / 6 / 6;
+  text-align: center;
+}
+
+input#bill-address-yes{
+  grid-area: 6 / 4 / 7 / 5;
+  color: var(--accent-strong);
+  background-color: var(--bg);
+  justify-self: end;
+  width:75%;
+}
+
+input#bill-address-no{
+  grid-area: 6 / 5 / 7 / 6;
+  background-color: var(--accent-strong);
+  width:75%;
+}
+
+/*==== Order Summary ====*/
+ul{
+  list-style-type: none;
+}
+
+li{
+  border-bottom: var(--bg) solid 2px;
+  width: 200%;
+  padding: 20px;
+}
+
+.cartsum p{
+  padding: 15px;
+}
+
+#grand-total{
+    border: var(--bg) solid 1px;
+    width: 100%;
+    border-radius: 4px;
+}
 /* ========== Media Queries ========== */
 
 
@@ -511,7 +1036,12 @@ strong{
 #cart-heading {
   font-weight: bold;
   font-size: 1.3rem;
+  color: black;
 
+}
+
+h3, p, i, h4 {
+  color: black;
 }
 
 hr {
@@ -523,8 +1053,35 @@ hr {
   flex-direction: column;
   font-weight: bold;
   padding: 1rem;
-  background-color: var(--elev);
-  color: var(--accent-strong)
+  border-radius: 4px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.cart-left {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 100%;
+}
+
+.cart-details input {
+  margin-top: 1.5rem;
+}
+
+.cart-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-img {
+  height: 100px;
+  width: 100px;
 }
 
 #your-cart {
@@ -537,12 +1094,12 @@ hr {
 }
 
 #your-cart, #order-summary {
-  border: 1px solid var(--accent-strong);
+  border: 1px solid black;
   padding: 1.5rem;
 }
 
 #grand-total button {
-  border: 1px solid var(--accent-strong);
+  border: 1px solid black;
   width: 100%;
   justify-self: center;
   border-radius: 4px;
@@ -558,4 +1115,357 @@ hr {
   transition: .5s;
   transform: translateY(1px);
 }
+
+@media (max-width: 768px) {
+  
+    #cart-page-main {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #your-cart, #order-summary {
+      width: 90%;
+    }
+
+  }
+
+
+
+
+/* ==========NAVIGATION NAVBAR ========== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  justify-content: space-around;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+/* Desktop nav */
+#desktop-nav,
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff4f00; 
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: #e86100;
+}
+
+/* Extras */
+.extras {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.extras input {
+  font-family: 'EB Garamond', serif;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+#hamburger-nav {
+  display: none;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  position: relative;
+  z-index: 1001;
+  display: inline-block;
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Hamburger bars */
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  border-radius: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Menu dropdown */
+.menu-links {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: #fff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); 
+  width: 200px; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  font-family: 'EB Garamond', serif;
+  padding: 0;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-links a:hover {
+  background-color: #f7f7f7;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  color: #e67e22;
+}
+
+/* Open state */
+.menu-links.open {
+  max-height: 500px;
+  padding: 10px 0;
+}
+
+/* Hamburger animation */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* Reset states */
+.hamburger-icon span:first-child {
+  transform: none;
+}
+.hamburger-icon span:nth-child(2) {
+  opacity: 1;
+}
+.hamburger-icon span:last-child {
+  transform: none;
+}
+
+/* ==========NAVIGATION NAVBAR RESPONSIVE ========== */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  .extras {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .menu-links a {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  padding: 2rem 0;
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer .logo {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #333;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e67e22;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+/* Newsletter Signup */
+.newsletter {
+  text-align: center;
+}
+
+.newsletter p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.95rem;
+  font-family: 'EB Garamond', serif;
+}
+
+.newsletter-form button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background: #e67e22;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #cf650f;
+}
+
+/* Footer Bottom Section */
+.footer-socials a i {
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover i {
+  color: #e67e22;
+}
+
+.footer-bottom {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  color: #777;
+}
+
+
 
