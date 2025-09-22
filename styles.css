@@ -780,6 +780,7 @@ button {
   .story-text {
     grid-column: 1;
     max-width: none;
+    
 
   }
 
@@ -879,6 +880,21 @@ button {
 }
 
 /* ========== Desktop ========== */
+@media screen and (min-width: 1280px) {
+   .story-text {
+    margin-left: 2rem;
+    
+   }
+
+   .milestones h2 {
+    font-size: 2rem;
+   }
+
+   .footer-links {
+     display: flex;
+     gap: 4rem;
+   }
+}
 
 /* ========== Focus visibility for keyboard users ========== */
 :focus-visible { 
