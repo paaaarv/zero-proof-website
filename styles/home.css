@@ -1,4 +1,6 @@
-
+h4{
+    text-transform: uppercase; 
+}
 .hero{
     height: 80vh; 
     display: flex; 
@@ -8,7 +10,7 @@
     width: 50%;
     display: flex; 
     flex-direction: column; 
-    margin: 2em; 
+    margin: 3em; 
 }
 #product-page-button{
     width: 40%; 
@@ -44,6 +46,35 @@
     top: 0;
     clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0 100%); 
 }
+
+#product-grid{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+}
+.card{
+    margin: 5px; 
+}
+
+#cart-products{
+    background-color: grey; 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 20px;
+}
+#summary-about{
+    width: 50%; 
+    margin: auto 0; 
+}
+#summary-about p{
+    display: inline-block; 
+    width: 50%;
+}
+#cart-div{
+    display: flex; 
+    justify-items: space-between;
+    align-items: center;
+}
 #ingredients h3{
     text-transform: uppercase;
 }
@@ -54,15 +85,44 @@
     margin: 50px 0;
 }
 
-.ingredient img{
+
+.circle-photo img{
     width: 10vw;
     height: 10vw;
     border-radius: 50%;
     overflow: hidden;
+    margin: 40px; 
 }
 
 #carousel{
     background-color: grey; 
     width: 100%; 
     text-align: center;
+}
+#photo-container{
+    margin: 20px auto;
+    display:flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px; 
+    background-color: white;
+    width: 60%;
+    text-align: center;
+}
+
+.fullscreen-img{
+    width: 100%;
+    object-fit: contain;
+}
+#catchphrase{
+    text-align: center;
+    margin: 50px 0 100px; 
+}
+
+
+.newsletter p{
+    margin-bottom: 40px; 
+}
+.newsletter{
+    margin: 50px;
 }
