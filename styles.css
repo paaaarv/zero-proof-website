@@ -380,6 +380,12 @@ header nav ul li a {
 
 .story .story-header h2 {
   color: #000;
+  font-size: 2rem;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: column-reverse;
 }
 /* Beginning of the milestone section */
 
