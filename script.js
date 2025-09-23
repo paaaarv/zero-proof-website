@@ -38,10 +38,11 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Close menu automatically when a link is clicked
+
 navLinks.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navLinks.classList.remove("active");
   });
 });
+

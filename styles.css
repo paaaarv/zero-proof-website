@@ -1144,14 +1144,18 @@ hr {
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
   font-family: "Cinzel", serif;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Add padding so content isn't hidden behind fixed nav */
+/* Add padding to avoid navbar overlap */
 body {
-  padding-top: 70px; /* adjust if you change nav height */
+  padding-top: 70px; /* height of navbar */
+}
+
+main {
+  flex: 1; /* pushes footer to bottom */
 }
 
 /* ------------------ NAVIGATION ------------------ */
@@ -1171,7 +1175,7 @@ nav {
   padding: 0.6rem 1.2rem;
 }
 
-/* ------------------ LOGO ------------------ */
+/* Logo */
 .logo {
   font-size: 1.2rem;
   color: black;
@@ -1180,12 +1184,9 @@ nav {
   border-radius: 20px;
   transition: background 0.3s ease;
 }
+.logo:hover { background: #bbb; }
 
-.logo:hover {
-  background: #bbb;
-}
-
-/* ------------------ NAV LINKS ------------------ */
+/* Nav Links */
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -1202,10 +1203,7 @@ nav {
   text-decoration: none;
   transition: background 0.3s ease;
 }
-
-.nav-links a:not(.cart):hover {
-  background: #bbb;
-}
+.nav-links a:not(.cart):hover { background: #bbb; }
 
 .nav-links .cart {
   background: none;
@@ -1213,23 +1211,10 @@ nav {
   display: flex;
   transition: transform 0.3s ease;
 }
+.nav-links .cart:hover { transform: scale(1.1); }
+.nav-links .cart .icon { width: 30px; height: 30px; stroke: #999; }
 
-.nav-links .cart:hover {
-  transform: scale(1.1);
-  stroke: #bbb;
-}
-
-.nav-links .cart .icon {
-  width: 30px;
-  height: 30px;
-  stroke: #999;
-}
-
-.nav-links li:last-child {
-  margin-left: 0.2rem;
-}
-
-/* ------------------ HAMBURGER MENU ------------------ */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -1237,7 +1222,6 @@ nav {
   cursor: pointer;
   z-index: 1001;
 }
-
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -1246,12 +1230,9 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* ------------------ MOBILE RESPONSIVE ------------------ */
+/* Mobile */
 @media screen and (max-width: 900px) {
-  .hamburger {
-    display: flex;
-  }
-
+  .hamburger { display: flex; }
   .nav-links {
     position: fixed;
     top: 0;
@@ -1265,35 +1246,125 @@ nav {
     transition: right 0.3s ease;
     z-index: 1000;
   }
+  .nav-links.active { right: 0; }
+  .nav-links a:not(.cart) { font-size: 1.5rem; padding: 0.8rem 1.5rem; }
+}
 
-  .nav-links.active {
-    right: 0;
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px,-6px); }
+
+/* ------------------ MAIN CONTENT ------------------ */
+#main-content {
+  flex: 1; /* pushes footer down */
+  min-height: 60vh; /* ensures space between navbar and footer */
+  padding: 2rem 1.5rem;
+}
+
+/* Optional visual spacer for demo */
+.spacer {
+  background: #f5f5f5;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ------------------ FOOTER ------------------ */
+#site-footer {
+  background: #444;
+  color: #fff;
+  padding: 2rem 1.5rem 1rem;
+  margin-top: auto; /* keep footer stuck to bottom */
+}
+
+/* Top container: logo + middle links */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* Footer Logo */
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: #999;
+  color: black;
+  padding: 1rem 2.5rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 5rem;
+}
+.footer-logo:hover { background: #bbb; }
+
+/* Middle Links - two column grid */
+.footer-middle-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 4rem;
+  row-gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  margin-right: 30rem;
+}
+.footer-middle-links li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.footer-middle-links li a:hover { color: #fff; }
+
+/* Social Icons - bottom right */
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.footer-social .icon {
+  width: 28px;
+  height: 28px;
+  stroke: #ddd;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+.footer-social a:hover .icon {
+  stroke: #bbb;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom - copyright centered */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-
-  .nav-links li {
-    margin-left: 0;
+  .footer-middle-links {
+    grid-template-columns: 1fr;
+    row-gap: 0.6rem;
+    margin-right: 0;
   }
-
-  .nav-links a:not(.cart) {
-    font-size: 1.5rem;
-    padding: 0.8rem 1.5rem;
+  .footer-social {
+    justify-content: center;
+    margin-top: 1.5rem;
   }
 }
-
-/* ------------------ HAMBURGER ANIMATION ------------------ */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-
 
 
 /* Shop Page */
