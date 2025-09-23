@@ -1135,10 +1135,7 @@ hr {
 
   }
 
-
-
-
-/* ------------------ RESET DEFAULT SPACING ------------------ */
+/* ------------------ RESET ------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -1147,26 +1144,31 @@ hr {
 
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: "Cinzel", serif;
-  line-height: 1;
+}
+
+/* Add padding so content isn't hidden behind fixed nav */
+body {
+  padding-top: 70px; /* adjust if you change nav height */
 }
 
 /* ------------------ NAVIGATION ------------------ */
 nav {
   width: 100%;
-  padding: 0.6rem 1.2rem;
-  margin: 0;
-  background-color: #444;
-  position: fixed; /* stick to top */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  background-color: #444;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.6rem 1.2rem;
 }
 
 /* ------------------ LOGO ------------------ */
@@ -1176,7 +1178,7 @@ nav {
   background: #999;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .logo:hover {
@@ -1198,7 +1200,7 @@ nav {
   color: black;
   font-size: 1.2rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .nav-links a:not(.cart):hover {
@@ -1209,7 +1211,7 @@ nav {
   background: none;
   padding-right: 1.2rem;
   display: flex;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .nav-links .cart:hover {
@@ -1241,7 +1243,7 @@ nav {
   height: 3px;
   background: black;
   border-radius: 2px;
-  transition: all 0.4s ease; /* smooth animation */
+  transition: all 0.3s ease;
 }
 
 /* ------------------ MOBILE RESPONSIVE ------------------ */
@@ -1260,7 +1262,7 @@ nav {
     background-color: #444;
     padding-top: 5rem;
     gap: 2rem;
-    transition: right 0.5s ease; /* smooth slide */
+    transition: right 0.3s ease;
     z-index: 1000;
   }
 
@@ -1291,166 +1293,7 @@ nav {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ------------------ PAGE CONTENT ADJUSTMENT ------------------ */
-body {
-  padding-top: 70px; /* pushes content below fixed navbar */
-}
 
-/* ========== HAMBURGER ICON ========== */
-.hamburger-icon span:nth-child(2) {
-  opacity: 1;
-}
-.hamburger-icon span:last-child {
-  transform: none;
-}
-
-/* ==========NAVIGATION NAVBAR RESPONSIVE ========== *
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  .extras {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .menu-links a {
-    font-size: 1.2rem;
-    padding: 8px;
-  }
-}
-
-/* Footer */
-.footer {
-  background: #f9f9f9;
-  border-top: 1px solid #eee;
-  padding: 2rem 0;
-  font-family: 'EB Garamond', serif;
-  text-align: center;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.footer .logo {
-  font-family: 'Cinzel', serif;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-text {
-  font-size: 1rem;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer-links a {
-  color: #333;
-  font-size: 1.3rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #e67e22;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-}
-
-/* Newsletter Signup */
-.newsletter {
-  text-align: center;
-}
-
-.newsletter p {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.newsletter-form input {
-  padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  outline: none;
-  font-size: 0.95rem;
-  font-family: 'EB Garamond', serif;
-}
-
-.newsletter-form button {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 4px;
-  background: #e67e22;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.newsletter-form button:hover {
-  background: #cf650f;
-}
-
-/* Footer Bottom Section */
-.footer-socials a i {
-  color: #333;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.footer-socials a:hover i {
-  color: #e67e22;
-}
-
-.footer-bottom {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-}
-
-.footer-bottom p {
-  color: #777;
-}
 
 
 /* Shop Page */

@@ -27,6 +27,9 @@ function renderOrderSummary() {
   const orderTotalSpan = document.getElementById("order-total");
   let total = 0;
 
+}
+
+/*======== NAVBAR========= */
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
