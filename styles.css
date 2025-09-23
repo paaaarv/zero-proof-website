@@ -732,7 +732,111 @@ li{
 
 
 /* ========== Tablet ========== */
-
+@media screen and (max-width: 768px){
+  .checkout-page{
+    display: flex;
+    flex-direction: column;
+  }
+  #shipping form{
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-row{
+    display: flex;
+    flex-direction: row;
+  }
+  .mobile-hide{
+    display: none;
+  }
+  #payment form{
+    width: 100%;
+    column-gap: 15px;
+  }
+  input#same-shipping{
+    grid-area: 1 / 4 / 3 / 5;
+        justify-self: end;
+        align-self: end;
+        width: 25%;
+        height: 90%;
+        transform: scale(.75);
+  }
+  label#same-shipping{
+    grid-area: 1 / 5 / 3 / 6;
+    width: 110%;
+    align-self: center;
+    justify-self: start;
+  }
+  input#same-address{
+    grid-area: 5 / 4 / 7 / 5;
+        justify-self: end;
+        align-self: end;
+        width: 25%;
+        height: 90%;
+        transform: scale(.75);
+  }
+  label#same-address{
+    grid-area: 5 / 5 / 7 / 6;
+    width: 110%;
+    align-self: center;
+    justify-self: start;
+  }
+  [type="checkbox"]:checked{
+    border: 1px solid (--bg);
+    color: var(--bg);
+  }
+  label#card-name{
+    width: 120%;
+  }
+  input#card-name{
+    width: 130%;
+  }
+  input#card-cvc{
+    width: 150%;
+  }
+  select#exp-date-month, select#exp-date-year{
+    width: 130%;
+  }
+  #tab{
+    position: relative;
+  }
+  #accordion{
+    position: absolute;
+    left: 195px;
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  #tab-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  #accordion:checked ~ #tab-content{
+    max-height: 30em;
+    width: 95%;
+    padding: 2rem;
+  }
+  .cartsum{
+    order: -1;
+  }
+  #grand-total{
+    margin: 0 4.35rem;
+    padding: .5rem 6.35rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .desktop-hide{
+    display: none;
+  }
+  .tab{
+    display: flex;
+    flex-direction: column;
+  }
+  #grand-total{
+    order: 1;
+    padding: .5rem 4.35rem;
+  }
+  
+}
 /* ========== Destkop ========== */
 
 /* ========== Focus visibility for keyboard users ========== */
