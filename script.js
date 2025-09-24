@@ -47,3 +47,9 @@ document.addEventListener('DOMContentLoaded', renderOrderSummary);
 function addItemToOrder(name, price, quantity) {
   orderItems.push({ name, price, quantity });
   renderOrderSummary();}
+
+  function show(shown, hidden){
+    document.getElementById(shown).style.display='block';
+    document.getElementById(hidden).style.display='none';
+    return false;
+  }

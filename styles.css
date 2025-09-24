@@ -709,11 +709,11 @@ input#bill-address-no{
 }
 
 /*==== Order Summary ====*/
-ul{
+.cartsum ul{
   list-style-type: none;
 }
 
-li{
+.cartsum li{
   border-bottom: var(--bg) solid 2px;
   width: 200%;
   padding: 20px;
@@ -727,6 +727,16 @@ li{
     border: var(--bg) solid 1px;
     width: 100%;
     border-radius: 4px;
+}
+.place-order{
+  background-color: var(--bg);
+  color: var(--accent-strong);
+  padding: 14px 25px;
+    height: 35px;
+    width: 12%;
+    position: relative;
+    top: 455px;
+    right: 170px;
 }
 /* ========== Media Queries ========== */
 
@@ -818,9 +828,23 @@ li{
   .cartsum{
     order: -1;
   }
-  #grand-total{
+  label#grand-total{
     margin: 0 4.35rem;
     padding: .5rem 6.35rem;
+  }
+  #payment{
+    display: none;
+  }
+  #next-page{
+    background-color: var(--bg);
+    color: var(--accent-strong);
+    padding: 14px 25px;
+  }
+  .place-order{
+    position: relative;
+    left: 35%;
+    top: 20px;
+    width: 16%;
   }
 }
 @media screen and (min-width: 769px) {
@@ -831,7 +855,7 @@ li{
     display: flex;
     flex-direction: column;
   }
-  #grand-total{
+  label#grand-total{
     order: 1;
     padding: .5rem 4.35rem;
   }

@@ -3,7 +3,7 @@
     <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[Brand Name] — Our Menu</title>
+  <title>[Brand Name] — Checkout</title>
   <meta name="description" content="Explore our curated menu of alcohol-free mocktails, crafted with bold flavors and style" />
   <meta name="author" content="[GIT 450 WEB TEAM  Fall B 2025]" />
   <title>Alcohol-Free Mocktails</title>
@@ -98,6 +98,7 @@
                 <label for="my-zip" id="my-zip">Zip</label>
                 <input type="text" name="my-zip" id="my-zip" required>
             </form>
+            <a href="#payment" onclick="return show('payment','shipping');" id="next-page" class="desktop-hide">Payment</a>
         </div>
         <div id="payment">
             <h2>Payment</h2>
@@ -148,6 +149,7 @@
                 <label for="same-address" id="same-address" class="desktop-hide">Use Shipping Address</label>
                 <input type="checkbox" name="same-address" id="same-address" class="desktop-hide">
             </form>
+            <a href="#shipping" onclick="return show('shipping','payment');" id="next-page" class="desktop-hide">Shipping</a>
         </div>
     </section>
 
@@ -167,7 +169,9 @@
         </div>
         </div>
     </section>
+    <a href="#" class="place-order">Place Order</a>
 </section>
+
 <script src="script.js"></script>
 </body>
 </html>
