@@ -27,130 +27,22 @@ function renderOrderSummary() {
   const orderTotalSpan = document.getElementById("order-total");
   let total = 0;
 
-  // Clear existing items
-  itemList.innerHTML = "";
+}
 
-  // Add each item to the list
-  orderItems.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = `${item.name} (x${item.quantity}) - $${(
-      item.price * item.quantity
-    ).toFixed(2)}`;
-    itemList.appendChild(listItem);
-    total += item.price * item.quantity;
+/*======== NAVBAR========= */
+const hamburger = document.querySelector(".zp-hamburger");
+const navLinks = document.querySelector(".zp-nav-links");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
   });
+});
 
-  // Update the total
-  orderTotalSpan.textContent = `$${total.toFixed(2)}`;
-}
 
-// Call the function to render the summary when the page loads
-document.addEventListener("DOMContentLoaded", renderOrderSummary);
-
-// Example of adding a new item (could be triggered by user action)
-function addItemToOrder(name, price, quantity) {
-  orderItems.push({ name, price, quantity });
-  renderOrderSummary();
-}
-
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
-
-// Mocktail product details
-
-const mocktailsArray = [
-  {
-    name: "Mocktail 1",
-    desc: "Lorem Ipsum",
-    price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+1",
-  },
-  {
-    name: "Mocktail 2",
-    desc: "Lorem Ipsum",
-    price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+2",
-  },
-  {
-    name: "Mocktail 3",
-    desc: "Lorem Ipsum",
-    price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+3",
-  },
-  {
-    name: "Mocktail 4",
-    desc: "Lorem Ipsum",
-    price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+4",
-  },
-  {
-    name: "Mocktail 5",
-    desc: "Lorem Ipsum",
-    price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+5",
-  },
-  {
-    name: "Mocktail 6",
-    desc: "Lorem Ipsum",
-    price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+6",
-  },
-];
-
-// Modal View functionality
-
-const mocktail1Btn = document.getElementById("view-mocktail1");
-const mocktail2Btn = document.getElementById("view-mocktail2");
-const mocktail3Btn = document.getElementById("view-mocktail3");
-const mocktail4Btn = document.getElementById("view-mocktail4");
-const mocktail5Btn = document.getElementById("view-mocktail5");
-const mocktail6Btn = document.getElementById("view-mocktail6");
-
-const btns = [
-  mocktail1Btn,
-  mocktail2Btn,
-  mocktail3Btn,
-  mocktail4Btn,
-  mocktail4Btn,
-  mocktail5Btn,
-  mocktail6Btn,
-];
-
-const modal = document.createElement("div");
-
-const createModal = (productNum) => {
-  modal.innerHTML = `<article class="card">
-            <i class="fa-solid fa-x modal-x" id="close-modal"></i>
-            <div class="card-media">
-              <img src=${mocktailsArray[productNum].img} alt="Mocktail ${productNum}" />
-            </div>
-            <div class="card-body">
-              <h3>${mocktailsArray[productNum].name}</h3>
-              <p>${mocktailsArray[productNum].desc}</p>
-              <a href="/checkout.html" class="card-btn">Buy Now</a>
-            </div>
-          </article>`;
-}
-
-const closeModal = () => {
-  overlay.classList.add("overlay-hide");
-  overlay.classList.remove("overlay-show");
-};
-
-const viewProductDetails = (e) => {
-  e.preventDefault();
-  const productNumber = e.target.dataset.mocktail
-  createModal(productNumber)
-  overlay.classList.remove("overlay-hide");
-  overlay.classList.add("overlay-show");
-  document.getElementById("overlay").appendChild(modal);
-  document.getElementById("close-modal").addEventListener("click", closeModal);
-};
-
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", viewProductDetails);
-}
