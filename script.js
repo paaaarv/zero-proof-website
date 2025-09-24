@@ -30,14 +30,13 @@ function renderOrderSummary() {
 }
 
 /*======== NAVBAR========= */
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
+const hamburger = document.querySelector(".zp-hamburger");
+const navLinks = document.querySelector(".zp-nav-links");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navLinks.classList.toggle("active");
 });
-
 
 navLinks.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
@@ -45,4 +44,5 @@ navLinks.querySelectorAll("a").forEach(link => {
     navLinks.classList.remove("active");
   });
 });
+
 
