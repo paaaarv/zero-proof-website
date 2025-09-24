@@ -1151,17 +1151,16 @@ html, body {
   flex-direction: column;
 }
 
-/* Add padding to avoid navbar overlap */
 body {
-  padding-top: 70px; /* height of navbar */
+  padding-top: 70px;
 }
 
-main {
-  flex: 1; /* pushes footer to bottom */
+#zp-main-content {
+  flex: 1;
 }
 
 /* ------------------ NAVIGATION ------------------ */
-nav {
+#zp-desktop-nav {
   width: 100%;
   position: fixed;
   top: 0;
@@ -1170,7 +1169,7 @@ nav {
   background-color: #444;
 }
 
-.nav-container {
+.zp-nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1178,25 +1177,29 @@ nav {
 }
 
 /* Logo */
-.logo {
+.zp-logo a {
+  display: inline-block;
   font-size: 1.2rem;
   color: black;
   background: #999;
   padding: 0.5rem 1rem;
   border-radius: 20px;
+  text-decoration: none;
   transition: background 0.3s ease;
 }
-.logo:hover { background: #bbb; }
+.zp-logo a:hover {
+  background: #bbb;
+}
 
 /* Nav Links */
-.nav-links {
+.zp-nav-links {
   display: flex;
   gap: 1.5rem;
   list-style: none;
   align-items: center;
 }
 
-.nav-links a:not(.cart) {
+.zp-nav-links a:not(.zp-cart) {
   background: #999;
   padding: 0.5rem 2rem;
   border-radius: 20px;
@@ -1205,26 +1208,26 @@ nav {
   text-decoration: none;
   transition: background 0.3s ease;
 }
-.nav-links a:not(.cart):hover { background: #bbb; }
+.zp-nav-links a:not(.zp-cart):hover { background: #bbb; }
 
-.nav-links .cart {
+.zp-nav-links .zp-cart {
   background: none;
   padding-right: 1.2rem;
   display: flex;
   transition: transform 0.3s ease;
 }
-.nav-links .cart:hover { transform: scale(1.1); }
-.nav-links .cart .icon { width: 30px; height: 30px; stroke: #999; }
+.zp-nav-links .zp-cart:hover { transform: scale(1.1); }
+.zp-nav-links .zp-cart .zp-icon { width: 30px; height: 30px; stroke: #999; }
 
 /* Hamburger Menu */
-.hamburger {
+.zp-hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
   z-index: 1001;
 }
-.hamburger span {
+.zp-hamburger span {
   width: 25px;
   height: 3px;
   background: black;
@@ -1234,8 +1237,8 @@ nav {
 
 /* Mobile */
 @media screen and (max-width: 900px) {
-  .hamburger { display: flex; }
-  .nav-links {
+  .zp-hamburger { display: flex; }
+  .zp-nav-links {
     position: fixed;
     top: 0;
     right: -100%;
@@ -1248,24 +1251,17 @@ nav {
     transition: right 0.3s ease;
     z-index: 1000;
   }
-  .nav-links.active { right: 0; }
-  .nav-links a:not(.cart) { font-size: 1.5rem; padding: 0.8rem 1.5rem; }
+  .zp-nav-links.active { right: 0; }
+  .zp-nav-links a:not(.zp-cart) { font-size: 1.5rem; padding: 0.8rem 1.5rem; }
 }
 
 /* Hamburger Animation */
-.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px,-6px); }
+.zp-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.zp-hamburger.active span:nth-child(2) { opacity: 0; }
+.zp-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px,-6px); }
 
 /* ------------------ MAIN CONTENT ------------------ */
-#main-content {
-  flex: 1; /* pushes footer down */
-  min-height: 60vh; /* ensures space between navbar and footer */
-  padding: 2rem 1.5rem;
-}
-
-/* Optional visual spacer for demo */
-.spacer {
+.zp-spacer {
   background: #f5f5f5;
   border: 2px dashed #ccc;
   border-radius: 10px;
@@ -1274,15 +1270,14 @@ nav {
 }
 
 /* ------------------ FOOTER ------------------ */
-#site-footer {
+#zp-site-footer {
   background: #444;
   color: #fff;
   padding: 2rem 1.5rem 1rem;
-  margin-top: auto; /* keep footer stuck to bottom */
+  margin-top: auto; 
 }
 
-/* Top container: logo + middle links */
-.footer-container {
+.zp-footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1291,8 +1286,7 @@ nav {
   padding-bottom: 1rem;
 }
 
-/* Footer Logo */
-.footer-logo {
+.zp-footer-logo {
   font-size: 2rem;
   font-weight: bold;
   background: #999;
@@ -1303,10 +1297,9 @@ nav {
   align-self: flex-start;
   margin-top: 5rem;
 }
-.footer-logo:hover { background: #bbb; }
+.zp-footer-logo:hover { background: #bbb; }
 
-/* Middle Links - two column grid */
-.footer-middle-links {
+.zp-footer-middle-links {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, max-content);
@@ -1316,34 +1309,32 @@ nav {
   padding: 0;
   margin-right: 30rem;
 }
-.footer-middle-links li a {
+.zp-footer-middle-links li a {
   color: #ddd;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
-.footer-middle-links li a:hover { color: #fff; }
+.zp-footer-middle-links li a:hover { color: #fff; }
 
-/* Social Icons - bottom right */
-.footer-social {
+.zp-footer-social {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
   margin-top: 1rem;
 }
-.footer-social .icon {
+.zp-footer-social .zp-icon {
   width: 28px;
   height: 28px;
   stroke: #ddd;
   transition: stroke 0.3s ease, transform 0.3s ease;
 }
-.footer-social a:hover .icon {
+.zp-footer-social a:hover .zp-icon {
   stroke: #bbb;
   transform: scale(1.1);
 }
 
-/* Footer Bottom - copyright centered */
-.footer-bottom {
+.zp-footer-bottom {
   text-align: center;
   padding-top: 1rem;
   font-size: 0.9rem;
@@ -1352,22 +1343,21 @@ nav {
 
 /* Responsive */
 @media screen and (max-width: 700px) {
-  .footer-container {
+  .zp-footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .footer-middle-links {
+  .zp-footer-middle-links {
     grid-template-columns: 1fr;
     row-gap: 0.6rem;
     margin-right: 0;
   }
-  .footer-social {
+  .zp-footer-social {
     justify-content: center;
     margin-top: 1.5rem;
   }
 }
-
 
 /* Shop Page */
 
