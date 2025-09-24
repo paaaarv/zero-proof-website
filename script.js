@@ -67,31 +67,31 @@ const mocktailsArray = [
     name: "The Sun",
     desc: "Golden peach, honey, and vanilla blossom with sparkling water",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=The+Sun",
+    img: "https://placehold.co/400x600?text=The+Sun",
   },
   {
     name: "The Siren",
     desc: "Sea salt, grapefruit, and rosemary",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=The+Siren",
+    img: "https://placehold.co/400x600?text=The+Siren",
   },
   {
     name: "The Fool",
     desc: "Yuzu, Lime, and Green Apple",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=The+Fool",
+    img: "https://placehold.co/400x600?text=The+Fool",
   },
   {
     name: "The Magician",
     desc: "Blood orange, gentian root, and herbal botanicals",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=The+Magician",
+    img: "https://placehold.co/400x600?text=The+Magician",
   },
   {
     name: "The Oracle",
     desc: "Tomato, black tea, and shiitake with subtle spice",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=The+Oracle",
+    img: "https://placehold.co/400x600?text=The+Oracle",
   }
 ];
 
