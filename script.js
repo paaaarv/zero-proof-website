@@ -64,41 +64,35 @@ function toggleMenu() {
 
 const mocktailsArray = [
   {
-    name: "Mocktail 1",
-    desc: "Lorem Ipsum",
+    name: "The Sun",
+    desc: "Golden peach, honey, and vanilla blossom with sparkling water",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+1",
+    img: "https://placehold.co/600x400?text=The+Sun",
   },
   {
-    name: "Mocktail 2",
-    desc: "Lorem Ipsum",
+    name: "The Siren",
+    desc: "Sea salt, grapefruit, and rosemary",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+2",
+    img: "https://placehold.co/600x400?text=The+Siren",
   },
   {
-    name: "Mocktail 3",
-    desc: "Lorem Ipsum",
+    name: "The Fool",
+    desc: "Yuzu, Lime, and Green Apple",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+3",
+    img: "https://placehold.co/600x400?text=The+Fool",
   },
   {
-    name: "Mocktail 4",
-    desc: "Lorem Ipsum",
+    name: "The Magician",
+    desc: "Blood orange, gentian root, and herbal botanicals",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+4",
+    img: "https://placehold.co/600x400?text=The+Magician",
   },
   {
-    name: "Mocktail 5",
-    desc: "Lorem Ipsum",
+    name: "The Oracle",
+    desc: "Tomato, black tea, and shiitake with subtle spice",
     price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+5",
-  },
-  {
-    name: "Mocktail 6",
-    desc: "Lorem Ipsum",
-    price: 12.99,
-    img: "https://placehold.co/600x400?text=Mocktail+6",
-  },
+    img: "https://placehold.co/600x400?text=The+Oracle",
+  }
 ];
 
 // Modal View functionality
@@ -108,7 +102,6 @@ const mocktail2Btn = document.getElementById("view-mocktail2");
 const mocktail3Btn = document.getElementById("view-mocktail3");
 const mocktail4Btn = document.getElementById("view-mocktail4");
 const mocktail5Btn = document.getElementById("view-mocktail5");
-const mocktail6Btn = document.getElementById("view-mocktail6");
 
 const btns = [
   mocktail1Btn,
@@ -117,7 +110,6 @@ const btns = [
   mocktail4Btn,
   mocktail4Btn,
   mocktail5Btn,
-  mocktail6Btn,
 ];
 
 const modal = document.createElement("div");
