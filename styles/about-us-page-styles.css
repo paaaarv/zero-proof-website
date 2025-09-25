@@ -1,6 +1,62 @@
+/*Imported Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+
+
+/* ========== CSS Reset (modern, minimal) ========== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 /* ========== ABOUT US SECTION (Sebastian’s Task) ========= */
 .header-nav {
-    background-color: #333;
+    background-color: #CFB383;
     color: #fff;
     padding: 1rem;
     position: relative;
@@ -21,7 +77,7 @@
   
   .menu-icon {
     cursor: pointer;
-    color: #fff;
+    color: #000;
     display: block;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -73,6 +129,11 @@
     padding: 3px;
     background-color: #B6B6B6;
   }
+
+   h1 {
+    font-family: "Metamorphous";
+
+  }
   
   
   /* The background could be bigger */
@@ -103,6 +164,7 @@
   .story .story-header h2 {
     color: #000;
     font-size: 2rem;
+    font-family: "Metamorphous";
   }
   
   .story-content {
@@ -116,6 +178,12 @@
     text-align: center;
     color: #000;
     font-weight: bold;
+    
+  }
+
+  .milestones h2 {
+    font-family: "Metamorphous";
+    font-size: 2rem;
   }
   
   .timeline {
@@ -146,6 +214,7 @@
     margin: 3rem 0;
     width: 100%;
     z-index: 1;
+    
   }
   
   .milestone::after {
@@ -205,7 +274,7 @@
   .newsletter {
     text-align: center;
     padding: 2rem 1rem;
-    background-color: #F2F2F2;
+    background-color: #9C704D;
     font-weight: bold;
     font-size: 1rem;
   }
@@ -231,40 +300,46 @@
     cursor: pointer;
     font-weight: bold;
     /* The button in the figma file is black and it blends in with the body background color. I chose a light gray for now. */
-    background-color: lightgray;
-    color: var(--bg);
+    background-color: #000;
+    color: #9C704D;
   }
   
   /* beginning styles of footer */
   .footer {
     padding: 2rem;
-    background-color: #666;
+    background-color: #1A2835;
   }
   
   .footer-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
   }
   
   .footer-links {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
+    justify-content: flex-end;
+    text-align: right;
+    padding-left: 1rem;
+    
   }
   
   .link-column {
-    list-style: none;
-    padding: 0;
-    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
     flex-direction: column;
-    gap: 0.5rem;
+    display: flex;
+    
   }
   
   .link-column a {
-    color: var(--accent);
+    color: #fff;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
+    
   }
   
   .link-column a:hover {
@@ -287,7 +362,7 @@
     width: 35px;
     height: 35px;
     transition: fill 0.3s ease;
-    color: #fff;
+    color: #CFB383;
   }
 
   /* ========== Tablet ========== */
