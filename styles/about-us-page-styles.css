@@ -132,13 +132,17 @@ table {
 
    h1 {
     font-family: "Metamorphous";
+    text-align: center;
+    font-size: 48px;
 
   }
   
   
   /* The background could be bigger */
   .hero {
-    background: url("https://placehold.co/1200x600") no-repeat center center/cover;
+    background: url("https://placehold.co/240x240") no-repeat center center/cover;
+    flex-shrink: 0;
+    min-height: 280px;
     color: var(--bg);
   }
   /* Beginning of h2 */
@@ -170,6 +174,10 @@ table {
   .story-content {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .intro  {
+    font-size: 2rem;
   }
   /* Beginning of the milestone section */
   
@@ -269,6 +277,10 @@ table {
     flex-direction: row;
     justify-content: flex-end;
   }
+
+  .milestones-subhead {
+    font-size: 2rem;
+  }
   
   /* Beginning of newsletter styles */
   .newsletter {
@@ -277,6 +289,11 @@ table {
     background-color: #9C704D;
     font-weight: bold;
     font-size: 1rem;
+  }
+
+  .newsletter h3 {
+    font-family: "Metamorphous";
+    font-size: 2rem;
   }
   .newsletter form {
     margin-top: 1rem;
@@ -290,7 +307,7 @@ table {
     padding: 0.5rem;
     width: 250px;
     border: 1px solid;
-    border-radius: 4px;
+    border-radius: 9px;
     margin-right: 0.5rem;
   }
   button {
