@@ -117,7 +117,7 @@ const modal = document.createElement("div");
 const createModal = (productNum) => {
   modal.innerHTML = 
   `<i class="fa-solid fa-x modal-x" id="close-modal"></i>
-  <article class="modal-card">
+  <article class="modal-card" id="modal-${productNum}">
       <div class="modal-card-top">
           <img class="modal-card-img" src=${mocktailsArray[productNum].img} alt="Mocktail ${productNum}" />
         <div class="modal-product-detail">
