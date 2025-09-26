@@ -355,40 +355,19 @@ body {
 
 /* Tarot Card Section */
 #tarot-cards {
-  background: #0f1115;
+  background: black; 
   padding: var(--space-6) 5%;
   text-align: center;
 }
 
-.tarot-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--space-4);
-  justify-items: center;
-}
-
-.tarot-card {
-  background: #1b2030;
+.tarot-banner {
+  width: 95%;          
+  max-width: 1400px;   
+  height: auto;        
+  display: block;
+  margin: 0 auto;
   border-radius: var(--r);
-  padding: var(--space-3);
   box-shadow: var(--shadow);
-  color: #fff;
-  transition: transform 0.2s ease;
-}
-
-.tarot-card:hover {
-  transform: translateY(-8px);
-}
-
-.tarot-card img {
-  max-width: 100%;
-  border-radius: var(--r);
-  margin-bottom: var(--space-2);
-}
-
-.tarot-card p {
-  font-size: var(--font-size-1);
-  font-weight: 600;
 }
 
 /* Footer */
