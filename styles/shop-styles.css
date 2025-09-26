@@ -8,11 +8,11 @@
   --magician: #5A4099;
   --oracle: #991D1F;
 
-  --sun-accent: #F2EC61;
-  --fool-accent: #19B67F;
-  --siren-accent: #7cc4da;
+  --sun-accent: #fef3c7;
+  --fool-accent: #D1FAE5;
+  --siren-accent: #E0FBFC;
   --magician-accent: #dfcbf3;
-  --oracle-accent: #FACACA;
+  --oracle-accent: #fecaca;
 
   --btn-bg: #2A2735;
   --btn-accent: #CFB383;
@@ -82,9 +82,14 @@ h1 {
 
 .card-body {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    height: 100%;
 }
 
-.card a, .card button {
+.card button {
   padding: 0.75rem 1rem;
   margin: 0;
   border: none;
@@ -122,22 +127,23 @@ h1 {
   color: black;
 }
 
-.card:first-of-type a.card-btn, .card:first-of-type button {
+.card:first-of-type button {
   background-color: var(--sun-accent);
 }
 
-.card:nth-of-type(2) a.card-btn, .card:nth-of-type(2) button {
+.card:nth-of-type(2) button {
   background-color: var(--siren-accent);
 }
 
-.card:nth-of-type(3) a.card-btn, .card:nth-of-type(3) button {
+.card:nth-of-type(3) button {
   background-color: var(--fool-accent);
 }
 
-.card:nth-of-type(4) a.card-btn, .card:nth-of-type(4) button {
+.card:nth-of-type(4) button {
   background-color: var(--magician-accent);
 }
-.card:nth-of-type(5) a.card-btn, .card:nth-of-type(5) button {
+
+.card:nth-of-type(5) button {
   background-color: var(--oracle-accent);
 }
 
