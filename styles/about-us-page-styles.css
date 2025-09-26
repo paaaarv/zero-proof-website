@@ -66,16 +66,16 @@ table {
   }
   
   .logo-zero {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     
-  
   }
   
   .menu-toggle {
     display: none;
   }
-  
+  /* Hamburger menu isnt showing */
   .menu-icon {
     cursor: pointer;
     color: #000;
@@ -83,16 +83,42 @@ table {
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
-  
-  .nav-menu {
-    display: none;
-    background-color: #444;
-    padding: 1rem;
-    border-radius: 8px;
-    top: 100%;
-    right: 1rem;
-    z-index: 10;
+   /* Styles for the SVG icons for the navigation area */
+  .cart-icon,
+  .search-icon,
+  .user-icon {
     position: absolute;
+    top: 1rem;
+    z-index: 101;
+  }
+
+  .cart-icon {
+    right: 1rem;
+  }
+
+  .user-icon {
+    right: 3rem;
+  }
+  
+  .search-icon {
+    right: 5rem;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1A2835;
+    border: 2px solid #1A2835;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 100;
+    width: 250px;
+    text-align: center;
+    /* Added a display none here to experiment */
+
   }
   
   .nav-menu ul {
@@ -104,13 +130,14 @@ table {
   .nav-menu li {
     margin-bottom: 1rem;
   }
+
   
   .nav-menu li a {
-    color: #000;
+    color: #CFB383;
     text-decoration: none;
   }
   
-  .menu-toggle:checked + .menu-icon + .nav-menu {
+  .menu-toggle:checked ~ .nav-menu {
     display: block;
   }
   
@@ -128,23 +155,38 @@ table {
     height: 35px;
     flex-shrink: 0;
     padding: 3px;
-    background-color: #B6B6B6;
+    
   }
 
    h1 {
     font-family: "Metamorphous";
     text-align: center;
-    font-size: 48px;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: normal;
+    color: #CFB383;
 
   }
-  
+  /* Added styles for main just now */
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   
   /* The background could be bigger */
   .hero {
-    background: url("https://placehold.co/240x240") no-repeat center center/cover;
-    flex-shrink: 0;
-    min-height: 280px;
-    color: var(--bg);
+    background: url('../Content/About-Us-Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 480px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    display: flex;
   }
   /* Beginning of h2 */
   .story {
@@ -164,6 +206,13 @@ table {
   
   .story-text {
     text-align: center;
+  }
+  /* Added story text p spacing because my paragraphs were too close together. */
+  .story-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-family: "Roboto";
+    font-size: 1rem;
   }
   
   .story .story-header h2 {
@@ -332,7 +381,30 @@ table {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 2rem 1rem;
     
+  }
+   /* Added styles for the footer contact */
+  .footer-contact {
+    text-align: center;
+    font-size: 0.95rem;
+    order: 1;
+    color: #fff;
+  }
+
+  /* Added styles for logo footer */
+  .footer-logo {
+    order: 4;
+    align-self: flex-start;
+
+
+  }
+
+  .footer-legal {
+    order: 5;
+    align-self: flex-end;
+    color: #fff;
+
   }
   
   .footer-links {
@@ -341,6 +413,7 @@ table {
     justify-content: flex-end;
     text-align: right;
     padding-left: 1rem;
+    order: 3;
     
   }
   
@@ -366,7 +439,8 @@ table {
   
   .footer-social-wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    order: 2;
   }
   
   .footer-social {
@@ -377,8 +451,8 @@ table {
   }
   
   .footer-social svg {
-    width: 35px;
-    height: 35px;
+    width: 23px;
+    height: 23px;
     transition: fill 0.3s ease;
     color: #CFB383;
   }
