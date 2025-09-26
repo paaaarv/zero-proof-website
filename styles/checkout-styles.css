@@ -68,15 +68,18 @@ table {
 }
 @font-face{
   font-family: Metamorphous;
-  src: url(/fonts/Metamorphous,Roboto/Metamorphous/Metamorphous-Regular.ttf);
+  src: url(/fonts/Metamorphous\,Roboto/);
 }
 @font-face{
   font-family: Roboto;
-  src: url(/fonts/Metamorphous,Roboto/Roboto/Roboto-VariableFont_wdth,wght.ttf);
+  src: url(/fonts/Metamorphous\,Roboto/);
 }
 /* ========== Checkout Styles ========== */
 body{
   background-image: url(content/background.jpeg);
+}
+header{
+  background-color: var(--dpblue);
 }
 h2, p, label, li, option{
   color: var(--gold);
@@ -351,8 +354,9 @@ input#bill-address-no{
     height: 35px;
     width: 70%;
     position: relative;
-    top: 455px;
-    right: 170px;
+    top: 500px;
+    right: 265px;
+    border-radius: 12px;
     text-align: center;
 }
 /* ========== Media Queries ========== */
