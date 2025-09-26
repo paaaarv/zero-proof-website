@@ -23,6 +23,157 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 }
+
+/* ========== THE CODE BELOW WAS ADDED ========== ========== THE CODE BELOW WAS ADDED ========== */
+
+/*hero image*/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-6) 5%;
+  background: #fdfcf7;
+}
+
+.hero .heading { max-width: 50%; }
+#header-img-container { display: flex; align-items: center; gap: var(--space-3); }
+#circle-header-img img { border-radius: 50%; max-width: 260px; }
+#polygon-header-img img { border-radius: 16px; max-width: 280px; }
+
+/* Product section */
+.products {
+  padding: var(--space-6) 5%;
+  background: #fff;
+}
+.products h2 {
+  text-align: center;
+  font-size: var(--font-size-2);
+  margin-bottom: var(--space-4);
+}
+#product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+.card {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.card:hover { transform: translateY(-5px); }
+.card-body { padding: var(--space-3); text-align: center; }
+.card-body h3 { margin-bottom: var(--space-2); }
+.card-body .button {
+  background: #6a9c89;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+.card-body .button:hover { background: #557a6e; }
+
+/* Ingredients section */
+#ingredients {
+  padding: var(--space-6) 5%;
+  background: #fdfcf7;
+}
+#ingredients-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+.circle-photo img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+/* Cart/About split Section */
+#cart-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding: var(--space-6) 5%;
+  align-items: center;
+  background: #fff;
+}
+#summary-about, #cart-div { flex: 1; }
+#cart-div img { max-width: 300px; border-radius: 50%; }
+
+/* Blog Section */
+#blog-highlight {
+  padding: var(--space-6) 5%;
+  text-align: center;
+}
+#blog-highlight h3 { margin-bottom: var(--space-4); }
+#blog-highlight .carousel img {
+  border-radius: var(--r);
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Extra icon grid and fullscreen image */
+#photo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-4);
+  padding: var(--space-6) 5%;
+  background: #fdfcf7;
+  text-align: center;
+}
+#photo-container p { margin-top: var(--space-2); font-weight: 500; }
+.fullscreen-img img {
+  width: 100%;
+  display: block;
+  margin-top: var(--space-4);
+  border-radius: var(--r);
+}
+
+/* catchphrase section */
+#catchphrase {
+  text-align: center;
+  padding: var(--space-6) 5%;
+  background: #fff;
+}
+#catchphrase h2 {
+  font-size: var(--font-size-2);
+  color: #6a4c3d;
+}
+
+/* Newsletter signup */
+.newsletter {
+  background: #e3d5c9;
+  padding: var(--space-6) 5%;
+  text-align: center;
+}
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: var(--space-3);
+}
+.newsletter input {
+  padding: 0.75rem 1rem;
+  width: 280px;
+  border: 1px solid #aaa;
+  border-radius: 30px;
+}
+.newsletter button {
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  background: #333;
+  color: white;
+  border: none;
+}
+.newsletter button:hover { background: #555; }
+
+
 /* Custom Fonts */
 @font-face {
   font-family: 'Metamorphous';
@@ -48,6 +199,8 @@ h1, h2, h3 {
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+/* ========== THE CODE ABOVE WAS ADDED ========== ========== THE CODE ABOVE WAS ADDED ========== */
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
