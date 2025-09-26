@@ -66,17 +66,27 @@ table {
   --accent-strong: #ffffff;    /* strong contrast on dark */
   --line: #2a3245;
 }
+@font-face{
+  font-family: Metamorphous;
+  src: url(/fonts/Metamorphous,Roboto/Metamorphous/Metamorphous-Regular.ttf);
+}
+@font-face{
+  font-family: Roboto;
+  src: url(/fonts/Metamorphous,Roboto/Roboto/Roboto-VariableFont_wdth,wght.ttf);
+}
 /* ========== Checkout Styles ========== */
 body{
   background-image: url(content/background.jpeg);
 }
 h2, p, label, li, option{
   color: var(--gold);
+  font-family: Roboto, serif;
 }
 h2{
   font-size: 1.5em;
   font-weight: 700;
-  padding: 10px
+  padding: 10px;
+  font-family: Metamorphous, sans-serif;
 }
 /*==== Nav ====*/
 nav{
