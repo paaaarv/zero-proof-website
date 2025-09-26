@@ -67,31 +67,31 @@ const mocktailsArray = [
     name: "The Sun",
     desc: "Golden peach, honey, and vanilla blossom with sparkling water",
     price: 12.99,
-    img: "/assets/the-sun.jpg",
+    img: "assets/the-sun.jpg",
   },
   {
     name: "The Siren",
     desc: "Sea salt, grapefruit, and rosemary",
     price: 12.99,
-    img: "/assets/the-siren.jpg",
+    img: "assets/the-siren.jpg",
   },
   {
     name: "The Fool",
     desc: "Yuzu, Lime, and Green Apple",
     price: 12.99,
-    img: "/assets/the-fool.jpg",
+    img: "assets/the-fool.jpg",
   },
   {
     name: "The Magician",
     desc: "Blood orange, gentian root, and herbal botanicals",
     price: 12.99,
-    img: "/assets/the-magician.jpg",
+    img: "assets/the-magician.jpg",
   },
   {
     name: "The Oracle",
     desc: "Tomato, black tea, and shiitake with subtle spice",
     price: 12.99,
-    img: "/assets/the-oracle.jpg",
+    img: "assets/the-oracle.jpg",
   }
 ];
 
