@@ -15,9 +15,8 @@ const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 //Order Summary 
 // Sample order data
 const orderItems = [
-  { name: 'Product A', price: 12.99, quantity: 1 },
-  { name: 'Product B', price: 5.50, quantity: 2 },
-  { name: 'Product C', price: 20.00, quantity: 1 }
+  { name: 'The Sun', price: 10, quantity: 1 },
+  { name: 'The Fool', price: 10, quantity: 1},
 ];
 
 function renderOrderSummary() {
@@ -31,7 +30,7 @@ function renderOrderSummary() {
   // Add each item to the list
   orderItems.forEach(item => {
     const listItem = document.createElement('li');
-    listItem.textContent = `${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}`;
+    listItem.textContent = `${item.name} Bottle Size - $${(item.price * item.quantity).toFixed(2)}`;
     itemList.appendChild(listItem);
     total += item.price * item.quantity;
   });
