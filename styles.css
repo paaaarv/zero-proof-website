@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* ========== THE CODE BELOW WAS ADDED ========== ========== THE CODE BELOW WAS ADDED ========== */
+/* ========== PART 1 THE CODE BELOW WAS ADDED ========== ========== THE CODE BELOW WAS ADDED ========== */
 
 /*hero image*/
 .hero {
@@ -44,17 +44,34 @@ time, mark, audio, video {
 /* Product section */
 .products {
   padding: var(--space-6) 5%;
-  background: #fff;
-}
-.products h2 {
   text-align: center;
-  font-size: var(--font-size-2);
-  margin-bottom: var(--space-4);
 }
+
 #product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr); 
   gap: var(--space-4);
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-4);
+}
+
+.view-all-wrapper {
+  margin-top: var(--space-3);
+}
+
+#view-all {
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#view-all:hover {
+  background: #9a7555;
 }
 .card {
   background: #fafafa;
@@ -200,7 +217,195 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* ========== THE CODE ABOVE WAS ADDED ========== ========== THE CODE ABOVE WAS ADDED ========== */
+/* ========== END OF PART 1 THE CODE ABOVE WAS ADDED ========== ========== THE CODE ABOVE WAS ADDED ========== */
+
+/* ========== PART 2 CODE BELOW WAS ADDED ========== CODE BELOW WAS ADDED ========== */
+#amazon-promo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6) 5%;
+  background: var(--panel);
+  color: var(--accent-strong);
+  gap: var(--space-4);
+}
+
+#amazon-promo .promo-left {
+  flex: 1;
+  background: #b08b67; /* brown background */
+  padding: var(--space-4);
+  border-radius: var(--r);
+  color: #fff;
+}
+
+#amazon-promo .promo-left h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-2);
+}
+
+#amazon-promo .promo-left p {
+  margin-bottom: var(--space-3);
+  font-size: var(--font-size-0);
+}
+
+#amazon-promo .promo-left .button {
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+}
+
+#amazon-promo .promo-right {
+  flex: 1;
+  text-align: center;
+}
+
+#amazon-promo .promo-right img {
+  max-width: 100%;
+  border-radius: var(--r);
+}
+
+/* Value Proposition Section */
+#value-props {
+  background: #fdfcf7;
+  padding: var(--space-6) 5%;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, auto);   
+  gap: var(--space-6) var(--space-4);    
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto; 
+}
+
+.value-item img {
+  background: #0f1115; 
+  border-radius: 50%;
+  padding: 1rem;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: var(--space-2);
+}
+
+.value-item p {
+  font-size: var(--font-size-0);
+  font-weight: 600;
+}
+
+/* Tarot Card Section */
+#tarot-cards {
+  background: #0f1115;
+  padding: var(--space-6) 5%;
+  text-align: center;
+}
+
+.tarot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-4);
+  justify-items: center;
+}
+
+.tarot-card {
+  background: #1b2030;
+  border-radius: var(--r);
+  padding: var(--space-3);
+  box-shadow: var(--shadow);
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.tarot-card:hover {
+  transform: translateY(-8px);
+}
+
+.tarot-card img {
+  max-width: 100%;
+  border-radius: var(--r);
+  margin-bottom: var(--space-2);
+}
+
+.tarot-card p {
+  font-size: var(--font-size-1);
+  font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+  background: #0f1115;
+  color: #ddd;
+  padding: var(--space-6) 5% var(--space-4);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-links {
+  flex: 2;
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: var(--font-size-0);
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+}
+
+.footer-logo img {
+  max-width: 60px;
+  margin-bottom: var(--space-2);
+}
+
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.25rem;
+}
+
+.footer-social a:hover img {
+  opacity: 0.8;
+}
+/* ========== END OF PART 2 THE CODE ABOVE WAS ADDED ========== CODE BELOW WAS ADDED ========== */
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
