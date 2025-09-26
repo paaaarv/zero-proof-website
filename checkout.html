@@ -68,7 +68,9 @@
     <!--Checkout Forms-->
     <section class="checkout">
         <div id="shipping">
-            <h2>Shipping</h2>
+            <h2 id="shipping-label"><svg id="shipping-label" xmlns="http://www.w3.org/2000/svg" width="62" height="54" viewBox="0 0 62 54" fill="none">
+<path d="M51.6712 18H43.9212V9H7.75456C4.91289 9 2.58789 11.025 2.58789 13.5V38.25H7.75456C7.75456 41.985 11.2162 45 15.5046 45C19.7929 45 23.2546 41.985 23.2546 38.25H38.7546C38.7546 41.985 42.2162 45 46.5046 45C50.7929 45 54.2546 41.985 54.2546 38.25H59.4212V27L51.6712 18ZM50.3796 21.375L55.4429 27H43.9212V21.375H50.3796ZM15.5046 40.5C14.0837 40.5 12.9212 39.4875 12.9212 38.25C12.9212 37.0125 14.0837 36 15.5046 36C16.9254 36 18.0879 37.0125 18.0879 38.25C18.0879 39.4875 16.9254 40.5 15.5046 40.5ZM21.2396 33.75C19.8187 32.3775 17.8037 31.5 15.5046 31.5C13.2054 31.5 11.1904 32.3775 9.76956 33.75H7.75456V13.5H38.7546V33.75H21.2396ZM46.5046 40.5C45.0837 40.5 43.9212 39.4875 43.9212 38.25C43.9212 37.0125 45.0837 36 46.5046 36C47.9254 36 49.0879 37.0125 49.0879 38.25C49.0879 39.4875 47.9254 40.5 46.5046 40.5Z" fill="#CFB383"/>
+</svg>   Shipping</h2>
             <form id="shipping">
                 <label for="first-name" id="first-name">First Name</label>
                 <input type="text" name="first-name" id="first-name" required>
@@ -142,7 +144,16 @@
             <a href="#payment" onclick="return show('payment','shipping');" id="next-page" class="desktop-hide">Payment</a>
         </div>
         <div id="payment">
-            <h2>Payment</h2>
+            <h2 id="payment-label"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+<g clip-path="url(#clip0_942_564)">
+<path d="M2.00391 20H46.0039M6.00391 8H42.0039C44.213 8 46.0039 9.79086 46.0039 12V36C46.0039 38.2091 44.213 40 42.0039 40H6.00391C3.79477 40 2.00391 38.2091 2.00391 36V12C2.00391 9.79086 3.79477 8 6.00391 8Z" stroke="#CFB383" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_942_564">
+<rect width="48" height="48" fill="white" transform="translate(0.00390625)"/>
+</clipPath>
+</defs>
+</svg>   Payment</h2>
             <form id="payment">
                 <label for="card-name" id="card-name">Cardholder Name</label>
                 <input type="text" name="card-name" id="card-name" required>

@@ -121,7 +121,8 @@ nav a{
   background-color: var(--dpblue);
   border: var(--gold) solid 2px;
   border-radius: 25px;
-  width: 175%;
+  width: 500%;
+  margin: 2rem;
 }
 
 #shipping, #payment{
@@ -159,6 +160,17 @@ nav a{
   grid-template-rows: repeat(8,1fr);
   row-gap: 5px;
   width: 90%;
+}
+
+#shipping-label{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+svg#shipping-label{
+  margin: 0 10px 0 0;
 }
 
 label#first-name {
@@ -234,6 +246,17 @@ input#my-zip{
   grid-template-rows: repeat(6, 1fr);
   width: 95%;
   column-gap: 5px;
+}
+
+#payment-label{
+  display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+svg#payment-label{
+  margin: 0 10px 0 0;
 }
 
 label#card-name{
