@@ -199,7 +199,6 @@ body {
     inset: calc(100% + 1px) 0 auto 0;
     background: var(--panel);
     border-bottom: 1px solid var(--line);
-    box-shadow: var(--shadow);
     padding: var(--space-3) var(--space-3) var(--space-4);
     flex-direction: column;
     gap: var(--space-3);
