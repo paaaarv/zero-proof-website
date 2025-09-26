@@ -1137,28 +1137,6 @@ hr {
 
 
 
-/* ------------------ RESET ------------------ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: "Cinzel", serif;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Add padding to avoid navbar overlap */
-body {
-  padding-top: 70px; /* height of navbar */
-}
-
-main {
-  flex: 1; /* pushes footer to bottom */
-}
 
 /* ------------------ NAVIGATION ------------------ */
 nav {
