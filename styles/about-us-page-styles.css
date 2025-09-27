@@ -465,55 +465,67 @@ table {
 @media screen and (min-width: 768px) {
 
     /* Styles for the header */
-    .header-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 100;
-      position: relative;
+    .nav-menu {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        height: auto !important;
+        width: auto !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        order: unset;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        
+
     }
   
     /* Styles for the navigation */
     /* Note: I had to use transparent background color as the navigation links had a background color of the dropdown menu from the hamburger menu from the mobile screen. This is a temporary fix. */
-  
-    nav {
-      margin: 0;
-    }
-  
-    nav ul {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-      
-    }
-    .nav-menu {
-      display: flex !important;
-      position: static;
-      flex-direction: row;
-      gap: 2rem;
-      background-color: transparent;
-  
-    }
-  
+   
     .nav-menu ul {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
-  
+
+    .nav-menu ul li a {
+        text-shadow: none !important;
+        box-shadow: none !important;
+        color: #CFB482 !important;
+        display: inline-block !important;
+        padding: 0;
+    }
+
+    .menu-toggle,
     .menu-icon {
-      display: none;
-  
+        display: none;
     }
-  
-    .menu-toggle {
-      display: none;
+
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        position: relative;
+
+    }
+
+    .logo-zero {
+        position: absolute;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        order: unset;
+        margin: 0;
     }
   
   
@@ -672,4 +684,7 @@ table {
       gap: 4rem;
     }
  }
+
+ /* Navigation seems to be the only thing I need to fix before moving on to the desktop screen. */
+ /* Note for when I wake up: Fix navigation for tablet screen. */
   
