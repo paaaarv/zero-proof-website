@@ -283,7 +283,7 @@ table {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
-    background-color: #666;
+    background-color: #CFB383;
     border-radius: 50%;
     z-index: 2;
   }
@@ -296,7 +296,7 @@ table {
     width: 50%;
     z-index: 1;
     transform: translateY(-50%);
-    background-color: #000;
+    background-color: #CFB383;
     
   }
   
@@ -373,8 +373,9 @@ table {
   
   /* beginning styles of footer */
   .footer {
-    padding: 2rem;
     background-color: #1A2835;
+    padding: 2rem;
+    
   }
   
   .footer-container {
@@ -395,10 +396,10 @@ table {
   /* Added styles for logo footer */
   .footer-logo {
     position: relative;
-    top: -1rem;
     order: 4;
-    bottom: 1rem;
-
+    top: -4rem;
+    margin-top: -4rem;
+    
   }
 
   .footer-legal {
@@ -406,7 +407,6 @@ table {
     align-self: flex-end;
     color: #fff;
     
-
   }
   
   .footer-links {
