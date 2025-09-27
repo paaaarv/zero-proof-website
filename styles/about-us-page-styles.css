@@ -394,9 +394,10 @@ table {
 
   /* Added styles for logo footer */
   .footer-logo {
+    position: relative;
+    top: -1rem;
     order: 4;
-    align-self: flex-start;
-
+    bottom: 1rem;
 
   }
 
@@ -404,6 +405,7 @@ table {
     order: 5;
     align-self: flex-end;
     color: #fff;
+    
 
   }
   
