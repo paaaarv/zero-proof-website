@@ -596,55 +596,63 @@ table {
     }
   
     /* Styling of footer for tablet */
-    .footer {
-      display: flex;
-      justify-content: flex-end;
-      padding: 2rem;
-  
-    }
-  
     .footer-container {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
-      max-width: 768px;
-      width: 100%;
-      justify-content: flex-end;
+        display: grid;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 2rem;
+        gap: 2rem 4rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto min-content;
+        grid-template-areas:
+        "contact_social links logo"
+        "legal legal legal";
     }
-  
+
+    .footer-logo {
+        grid-area: logo;
+        align-self: flex-start;
+        justify-self: flex-end;
+        position: static;
+        margin-top: 0;
+        top: auto;
+        order: unset;
+    }
+
+    .footer-contact {
+        grid-area: contact_social;
+        align-self: flex-start;
+        text-align: left;
+        order: unset;
+    }
+
     .footer-links {
-      display: flex;
-      gap: 2rem;
+        grid-area: links;
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+        order: unset;
     }
-  
-    .link-column {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-  
-    .link-column li a {
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-  
+
     .footer-social-wrapper {
-      margin-top: auto;
-      align-self: flex-start;
+        grid-area: contact_social;
+        align-self: flex-end;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        margin-top: auto;
+        order: unset;
     }
-  
-    .footer-social {
-      display: flex;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+
+    .footer-legal {
+        grid-area: legal;
+        text-align: left;
+        align-self: flex-start;
+        order: unset;
+        margin-top: 2rem;
     }
-  
-    .footer-social li svg {
-      width: 24px;
-      height: 24px;
-      fill: #fff;
+
+    .link-column {
+        align-items: flex-start;
     }
   }
 
